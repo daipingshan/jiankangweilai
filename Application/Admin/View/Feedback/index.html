@@ -1,0 +1,115 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+
+        .img-list img {
+            display: none;
+            width: 80px;
+        }
+
+        .img-list img:first-child {
+            display: inline-block;
+        }
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="feedback_type">
+                    <option value="">请选择广告反馈类型</option>
+                    <foreach name="type_data" item="val" key="key">
+                        <option value="{$key}"
+                        <if condition="I('get.test_paper_id') eq $key">selected</if>
+                        >{$val}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="content" value="{:I('get.content')}" placeholder="请输入反馈内容"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        {{# if(d.reply){ }}
+        <span style="color: #009688">已回复</span>
+        {{# }else { }}
+        <a class="layui-btn layui-btn-xs layui-btn-danger" href="{:U('reply')}?id={{d.id}}">回复</a>
+        {{# } }}
+
+    </script>
+    <script type="text/html" id="img">
+        {{# if(d.pics){ }}
+        <div class="open-img-layer cursor">
+            <div class="img-list">
+                {{# for(var i = 0, len = d.pics_data.length; i < len; i++){ }}
+                <img layer-pid="{{i}}" layer-src={{d.pics_data[i]}} src="{{d.pics_data[i]}}" alt="{{d.content}}">
+                {{# } }}
+            </div>
+        </div>
+        {{# }else { }}
+        未反馈图片
+        {{# } }}
+    </script>
+    <script>
+        $(function () {
+            form.render();
+            var url = "{:U('index')}";
+            getData(url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+            $('body').on('mouseover', '.open-img-layer', function () {
+                var _this = $(this);
+                layer.photos({
+                    photos: _this
+                });
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '反馈ID', sort: true}
+                        , {field: 'trainer_info', width: 180, title: '反馈人信息'}
+                        , {field: 'type_view', title: '反馈类型'}
+                        , {field: 'pic', title: '反馈图片', width: 120, templet: '#img'}
+                        , {field: 'content', width: 150, title: '反馈内容'}
+                        , {field: 'add_time', width: 180, title: '反馈时间'}
+                        , {field: 'reply', width: 150, title: '回复内容'}
+                        , {field: 'reply_time', width: 180, title: '回复时间'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit'}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

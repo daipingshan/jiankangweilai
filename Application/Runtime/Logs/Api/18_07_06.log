@@ -1,0 +1,36 @@
+[ 2018-07-06T14:02:21+08:00 ] 127.0.0.1 //Index/index/token/033ccad034cec319c2c9720a6e3d737a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0675s ]
+SQL: SELECT * FROM `trainer` WHERE `token` = '033ccad034cec319c2c9720a6e3d737a' LIMIT 1   [ RunTime:0.0688s ]
+SQL: SHOW COLUMNS FROM `advert` [ RunTime:0.0667s ]
+SQL: SELECT * FROM `advert` WHERE `status` = 1  [ RunTime:0.0692s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0660s ]
+SQL: SELECT *,id as baby_id FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0659s ]
+
+[ 2018-07-06T14:02:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000797s ]
+
+[ 2018-07-06T14:02:21+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+
+[ 2018-07-06T16:18:13+08:00 ] 127.0.0.1 //Index/index/token/033ccad034cec319c2c9720a6e3d737a
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `advert` [ RunTime:3.0940s ]
+SQL: SELECT * FROM `advert` WHERE `status` = 1  [ RunTime:0.9779s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.9385s ]
+SQL: SELECT *,id as baby_id FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0997s ]
+

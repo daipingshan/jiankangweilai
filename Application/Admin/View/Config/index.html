@@ -1,0 +1,133 @@
+<extend name="Common/common"/>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>编辑系统设置</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">图片前缀</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="IMG_PREFIX" value="{$content['IMG_PREFIX']}" placeholder="请输入图片前缀"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">OSS key_id</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="OSS[key_id]" value="{$content['OSS']['key_id']}"
+                               placeholder="请输入OSS key_id"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">OSS key_secret</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="OSS[key_secret]" value="{$content['OSS']['key_secret']}"
+                               placeholder="请输入OSS key_secret"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">空间名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="OSS[bucket]" value="{$content['OSS']['bucket']}"
+                               placeholder="请输入空间名称"
+                               class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">客服微信</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="CUSTOM_SERVICE[wei_xin]"
+                               value="{$content['CUSTOM_SERVICE']['wei_xin']}"
+                               placeholder="请输入客服微信"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">客服QQ</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="CUSTOM_SERVICE[qq]" value="{$content['CUSTOM_SERVICE']['qq']}"
+                               placeholder="请输入客服QQ"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">客服电话</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="CUSTOM_SERVICE[tel]" value="{$content['CUSTOM_SERVICE']['tel']}"
+                               placeholder="请输入客服电话"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">关系数据</label>
+                    <div class="layui-input-inline" style="display: inline-block;width: 70%">
+                        <input type="text" name="caregiver_relation" value="{$content['caregiver_relation']}"
+                               placeholder="关系数据"
+                               class="layui-input">
+
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">英文逗号隔开【,】</div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //自定义工具栏
+            layedit.build('layui-edit', {
+                tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+                , height: 200
+            })
+            upload.render({
+                elem: '#layui-upload-file'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input').val(res.url);
+                        $('#img').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 2) {
+                    $('#url').show();
+                } else {
+                    $('#url').hide();
+                }
+            });
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

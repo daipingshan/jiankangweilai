@@ -1,0 +1,82 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .img-box {
+            width: 20%;
+            margin: 2%;
+            border: 1px solid #ccc;
+            position: relative;
+            float: left;
+        }
+
+        .img-box img {
+            width: 100%;
+        }
+
+        .img-box button {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</block>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>回复意见反馈</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">反馈内容</label>
+                    <div class="layui-input-block">
+                        <p style="margin-left:20px;line-height: 38px">{$info['content']}</p>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">反馈图片</label>
+                    <div class="layui-input-block">
+                        <div id="pics-img">
+                            <volist name="info.pics_data" id="row">
+                                <div class="img-box">
+                                    <img src="{$row}">
+                                </div>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">回复内容</label>
+                    <div class="layui-input-block">
+                        <textarea name="content" class="layui-textarea" placeholder="请输入回复内容"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <input type="hidden" name="id" value="{$info.id}">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('doReply')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

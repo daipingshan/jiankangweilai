@@ -1,0 +1,140 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="test_paper_id" lay-filter="paper">
+                    <option value="">请选择所属试卷</option>
+                    <foreach name="paper_data" item="val" key="key">
+                        <option value="{$key}"
+                        <if condition="I('get.test_paper_id') eq $key">selected</if>
+                        >{$val}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="knowledge_id" id="knowledge_id">
+                    <option value="">请选择所属知识点</option>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="question" value="{:I('get.question')}" placeholder="请输入试题问题"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+                <a class="layui-btn layui-btn-danger" href="{:U('add')}"><i class="layui-icon">
+                    &#xe654;</i>添加试题
+                </a>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('update')}?id={{d.id}}">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger del-data" data-url="{:U('delete')}?id={{d.id}}">删除</a>
+    </script>
+    <script type="text/html" id="select_type">
+        {{# if(d.select_type == 'single') { }}
+        <span style="color:#009688;">单选</span>
+        {{# } else { }}
+        <span style="color:#FF5722;">多选</span>
+        {{# } }}
+    </script>
+    <script>
+        $(function () {
+            var url = "{:U('index')}";
+            var paper_id = "{:I('get.test_paper_id',0,'int')}";
+            if (paper_id > 0) {
+                getKnowledge(paper_id);
+            }
+            form.render();
+            var get_param = $('form.search').serialize();
+            var get_url = url + '?' + get_param;
+            getData(get_url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+            form.on('select(paper)', function (data) {
+                getKnowledge(data.value);
+            })
+
+            function getKnowledge(test_paper_id) {
+                $.get("{:U('getKnowledgeData')}", {test_paper_id: test_paper_id}, function (res) {
+                    var data = res.info;
+                    if (data.length > 0) {
+                        var html = "<option value=''>请选择所属知识点</option>";
+                        for (var i = 0; i < data.length; i++) {
+                            html += "<option value='" + data[i].id + "'>" + data[i].name + "</option>"
+                        }
+                        $('#knowledge_id').html(html);
+                        form.render('select');
+                    }
+                })
+            }
+
+            $('body').on('click', '.del-data', function () {
+                var del_url = $(this).data('url');
+                layer.confirm('删除该试题，对应试卷的分值也会发生变化，您确定要删除吗？', function () {
+                    $.get(del_url, {}, function (res) {
+                        if (res.status == 1) {
+                            layer.msg(res.info, function () {
+                                var get_param = $('form.search').serialize();
+                                var get_url = url + '?' + get_param;
+                                getData(get_url);
+                            })
+                        } else {
+                            layer.msg(res.info);
+                        }
+                    })
+                })
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '试题ID', sort: true}
+                        , {field: 'test_paper_name', width: 200, title: '试卷名称'}
+                        , {field: 'course', width: 200, title: '课程名称'}
+                        , {field: 'title', width: 200, title: '知识点标题'}
+                        , {field: 'question', width: 220, title: '试题问题'}
+                        , {field: 'score', title: '分值'}
+                        , {field: 'select_type', title: '试题类型', templet: '#select_type'}
+                        , {field: 'add_time', width: 160, title: '添加时间'}
+                        , {field: 'update_time', width: 160, title: '更新时间'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit', width: 120}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

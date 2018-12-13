@@ -1,0 +1,127 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="trainer_id" lay-filter="trainer">
+                    <option value="">请选择健康管理员</option>
+                    <foreach name="trainer_data" item="val" key="key">
+                        <option value="{$key}"
+                        <if condition="I('get.trainer_id') eq $key">selected</if>
+                        >{$val}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="caregiver_id" id="caregiver_id">
+                    <option value="">请选择养育人</option>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="add_time" value="{:I('get.question')}" id="add_time" placeholder="请选择时间范围"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        {{# if(d.total_score == d.score){ }}
+        <span style="color:#009688;">本次考试无错题记录</span>
+        {{# } else { }}
+        <a class="layui-btn layui-btn-xs">查看错题记录</a>
+        {{# } }}
+    </script>
+    <script>
+        $(function () {
+            var url = "{:U('index')}";
+            var trainer_id = "{:I('get.trainer_id',0,'int')}";
+            var caregiver_baby_id = "{:I('get.caregiver_baby_id',0,'int')}";
+            if (trainer_id > 0) {
+                getCaregiver(trainer_id, caregiver_baby_id);
+            }
+            form.render();
+            var get_param = $('form.search').serialize();
+            var get_url = url + '?' + get_param;
+            getData(get_url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+            form.on('select(trainer)', function (data) {
+                getCaregiver(data.value, 0);
+            })
+
+            laydate.render({
+                elem: '#add_time',
+                range: '~'
+            });
+
+            function getCaregiver(trainer_id, caregiver_baby_id) {
+                $.get("{:U('getCaregiverData')}", {trainer_id: trainer_id}, function (res) {
+                    var data = res.info;
+                    if (data.length > 0) {
+                        var html = "<option value=''>请选择养育人</option>";
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].id == caregiver_baby_id) {
+                                html += "<option value='" + data[i].id + "' selected>" + data[i].name + "</option>"
+                            } else {
+                                html += "<option value='" + data[i].id + "'>" + data[i].name + "</option>"
+                            }
+
+                        }
+                        $('#caregiver_id').html(html);
+                        form.render('select');
+                    }
+                })
+            }
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '考试ID', sort: true}
+                        , {field: 'trainer_info', width: 180, title: '健康管理员信息', sort: true}
+                        , {field: 'caregiver_info', width: 180, title: '养育人信息', sort: true}
+                        , {field: 'course', width: 200, title: '课程名称'}
+                        , {field: 'test_paper_name', width: 200, title: '试卷名称'}
+                        , {field: 'total_question_num', title: '试题总数'}
+                        , {field: 'total_score', title: '试卷总分'}
+                        , {field: 'score', title: '实际得分'}
+                        , {field: 'add_time', width: 160, title: '记录时间'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit'}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

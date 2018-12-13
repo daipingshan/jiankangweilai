@@ -1,0 +1,120 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="mobile" value="{:I('get.mobile')}" placeholder="请输入手机号码" class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="real_name" value="{:I('get.real_name')}" placeholder="请输入真实姓名"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="status">
+                    <option value="">请选择状态</option>
+                    <option value="1"
+                    <if condition="I('get.status') eq 1">selected</if>
+                    >启用</option>
+                    <option value="2"
+                    <if condition="I('get.status') eq 2">selected</if>
+                    >禁用</option>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+                <a class="layui-btn layui-btn-danger" href="{:U('add')}"><i class="layui-icon">
+                    &#xe654;</i>添加健康管理员
+                </a>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('update')}?id={{d.id}}">编辑</a>
+        {{# if(d.status == 1) { }}
+        <a class="layui-btn layui-btn-xs layui-btn-danger"
+           href="{:U('CaregiverBaby/add')}?trainer_id={{d.id}}">添加养育人-宝宝</a>
+        {{# } }}
+        <a class="layui-btn layui-btn-xs layui-btn-warm"
+           href="{:U('Train/index')}?trainer_id={{d.id}}">入户记录</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary"
+           href="{:U('Exam/index')}?trainer_id={{d.id}}">考试记录</a>
+    </script>
+    <script type="text/html" id="img">
+        <div class="open-img-layer cursor"><img layer-src={{d.avatar}} src="{{d.avatar}}" alt="{{d.real_name}}"
+                                                width="120">
+        </div>
+    </script>
+    <script type="text/html" id="status">
+        <input type="checkbox" value="{{d.id}}" lay-skin="switch" lay-text="启用|禁用" lay-filter="status"
+               {{ d.status== 1 ? 'checked' : '' }}>
+    </script>
+    <script>
+        $(function () {
+            form.render();
+            var url = "{:U('index')}";
+            getData(url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+            $('body').on('mouseover', '.open-img-layer', function () {
+                var _this = $(this);
+                layer.photos({
+                    photos: _this
+                });
+            })
+
+            //监听性别操作
+            form.on('switch(status)', function (obj) {
+                var status_url = "{:U('setStatus')}";
+                $.get(status_url, {id: this.value}, function (res) {
+                    layer.tips(res.info, obj.othis);
+                })
+            });
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '编号', sort: true}
+                        , {field: 'mobile', width: 200, title: '手机号码'}
+                        , {field: 'pic', title: '图像', width: 150, templet: '#img'}
+                        , {field: 'real_name', title: '真实姓名'}
+                        , {field: 'age', title: '年龄'}
+                        , {field: 'sex_view', title: '性别'}
+                        , {field: 'add_time', width: 180, title: '添加时间'}
+                        , {field: 'status', title: '状态', templet: '#status'}
+                        , {fixed: 'right', title: '操作', width: 320, toolbar: '#table-edit'}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

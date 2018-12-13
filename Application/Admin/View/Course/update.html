@@ -1,0 +1,254 @@
+<extend name="Common/common"/>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>编辑课程信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="course" value="{$info.course}" placeholder="请输入课程名称"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程简介</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="请输入课程简介"
+                                  class="layui-textarea">{$info.desc}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程封面</label>
+                    <div class="layui-input-block" style="position: relative">
+                        <input type="text" name="cover_url" value="{$info.cover_url}" id="img-input"
+                               class="layui-input layui-disabled"
+                               placeholder="请上传封面图片" readonly style="width: 75%">
+                        <div style="position: absolute;left:80% ;top:0;">
+                            <button type="button" class="layui-btn" id="layui-upload-file">
+                                <i class="layui-icon">&#xe67c;</i>上传封面
+                            </button>
+                        </div>
+                        <div style="position: absolute;left:80% ;top:50px;z-index: 10">
+                            <img src="{$info.cover_url}" width="100" id="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">适合月份</label>
+                    <div class="layui-input-inline">
+                        <select name="suit_month">
+                            <option value="">请选择适合月份</option>
+                            <option value="-1"
+                            <if condition="$info['suit_month'] eq -1">selected</if>
+                            >孕9个月</option>
+                            <option value="-2"
+                            <if condition="$info['suit_month'] eq -2">selected</if>
+                            >孕8个月</option>
+                            <option value="-3"
+                            <if condition="$info['suit_month'] eq -3">selected</if>
+                            >孕7个月</option>
+                            <option value="-4"
+                            <if condition="$info['suit_month'] eq -4">selected</if>
+                            >孕6个月</option>
+                            <option value="-5"
+                            <if condition="$info['suit_month'] eq -5">selected</if>
+                            >孕5个月</option>
+                            <option value="-6"
+                            <if condition="$info['suit_month'] eq -6">selected</if>
+                            >孕4个月</option>
+                            <option value="-7"
+                            <if condition="$info['suit_month'] eq -7">selected</if>
+                            >孕3个月</option>
+                            <option value="-8"
+                            <if condition="$info['suit_month'] eq -8">selected</if>
+                            >孕2个月</option>
+                            <option value="-9"
+                            <if condition="$info['suit_month'] eq -9">selected</if>
+                            >孕1个月</option>
+                            <option value="0"
+                            <if condition="$info['suit_month'] eq 0">selected</if>
+                            >新生儿</option>
+                            <option value="1"
+                            <if condition="$info['suit_month'] eq 1">selected</if>
+                            >1个月</option>
+                            <option value="2"
+                            <if condition="$info['suit_month'] eq 2">selected</if>
+                            >2个月</option>
+                            <option value="3"
+                            <if condition="$info['suit_month'] eq 3">selected</if>
+                            >3个月</option>
+                            <option value="4"
+                            <if condition="$info['suit_month'] eq 4">selected</if>
+                            >4个月</option>
+                            <option value="5"
+                            <if condition="$info['suit_month'] eq 5">selected</if>
+                            >5个月</option>
+                            <option value="6"
+                            <if condition="$info['suit_month'] eq 6">selected</if>
+                            >6个月</option>
+                            <option value="7"
+                            <if condition="$info['suit_month'] eq 7">selected</if>
+                            >7个月</option>
+                            <option value="8"
+                            <if condition="$info['suit_month'] eq 8">selected</if>
+                            >8个月</option>
+                            <option value="9"
+                            <if condition="$info['suit_month'] eq 9">selected</if>
+                            >9个月</option>
+                            <option value="10"
+                            <if condition="$info['suit_month'] eq 10">selected</if>
+                            >10个月</option>
+                            <option value="11"
+                            <if condition="$info['suit_month'] eq 11">selected</if>
+                            >11个月</option>
+                            <option value="12"
+                            <if condition="$info['suit_month'] eq 12">selected</if>
+                            >12个月</option>
+                            <option value="13"
+                            <if condition="$info['suit_month'] eq 13">selected</if>
+                            >13个月</option>
+                            <option value="14"
+                            <if condition="$info['suit_month'] eq 14">selected</if>
+                            >14个月</option>
+                            <option value="15"
+                            <if condition="$info['suit_month'] eq 15">selected</if>
+                            >15个月</option>
+                            <option value="16"
+                            <if condition="$info['suit_month'] eq 16">selected</if>
+                            >16个月</option>
+                            <option value="17"
+                            <if condition="$info['suit_month'] eq 17">selected</if>
+                            >17个月</option>
+                            <option value="18"
+                            <if condition="$info['suit_month'] eq 18">selected</if>
+                            >18个月</option>
+                            <option value="19"
+                            <if condition="$info['suit_month'] eq 19">selected</if>
+                            >19个月</option>
+                            <option value="20"
+                            <if condition="$info['suit_month'] eq 20">selected</if>
+                            >20个月</option>
+                            <option value="21"
+                            <if condition="$info['suit_month'] eq 21">selected</if>
+                            >21个月</option>
+                            <option value="22"
+                            <if condition="$info['suit_month'] eq 22">selected</if>
+                            >22个月</option>
+                            <option value="23"
+                            <if condition="$info['suit_month'] eq 23">selected</if>
+                            >23个月</option>
+                            <option value="24"
+                            <if condition="$info['suit_month'] eq 24">selected</if>
+                            >24个月</option>
+                            <option value="25"
+                            <if condition="$info['suit_month'] eq 25">selected</if>
+                            >25个月</option>
+                            <option value="26"
+                            <if condition="$info['suit_month'] eq 26">selected</if>
+                            >26个月</option>
+                            <option value="27"
+                            <if condition="$info['suit_month'] eq 27">selected</if>
+                            >27个月</option>
+                            <option value="28"
+                            <if condition="$info['suit_month'] eq 28">selected</if>
+                            >28个月</option>
+                            <option value="29"
+                            <if condition="$info['suit_month'] eq 29">selected</if>
+                            >29个月</option>
+                            <option value="30"
+                            <if condition="$info['suit_month'] eq 30">selected</if>
+                            >30个月</option>
+                            <option value="31"
+                            <if condition="$info['suit_month'] eq 31">selected</if>
+                            >31个月</option>
+                            <option value="32"
+                            <if condition="$info['suit_month'] eq 32">selected</if>
+                            >32个月</option>
+                            <option value="33"
+                            <if condition="$info['suit_month'] eq 33">selected</if>
+                            >33个月</option>
+                            <option value="34"
+                            <if condition="$info['suit_month'] eq 34">selected</if>
+                            >34个月</option>
+                            <option value="35"
+                            <if condition="$info['suit_month'] eq 35">selected</if>
+                            >35个月</option>
+                            <option value="36"
+                            <if condition="$info['suit_month'] eq 36">selected</if>
+                            >36个月</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="require" value="1" lay-filter="radio" title="必修"
+                        <eq name="info.require" value="1">checked</eq>
+                        >
+                        <input type="radio" name="require" value="2" lay-filter="radio" title="选修"
+                        <eq name="info.require" value="2">checked</eq>
+                        >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <input type="hidden" name="id" value="{$info.id}">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //自定义工具栏
+            layedit.build('layui-edit', {
+                tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+                , height: 200
+            })
+            upload.render({
+                elem: '#layui-upload-file'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input').val(res.url);
+                        $('#img').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 2) {
+                    $('#url').show();
+                } else {
+                    $('#url').hide();
+                }
+            });
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

@@ -1,0 +1,114 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="course" value="{:I('get.course')}" placeholder="请输入课程名称" class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="require">
+                    <option value="">请选择课程类型</option>
+                    <option value="1"
+                    <if condition="I('get.require') eq 1">selected</if>
+                    >必修</option>
+                    <option value="2"
+                    <if condition="I('get.require') eq 2">selected</if>
+                    >选修</option>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+                <a class="layui-btn layui-btn-danger" href="{:U('add')}"><i class="layui-icon">
+                    &#xe654;</i>添加课程
+                </a>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="img">
+        <div class="open-img-layer cursor"><img layer-src={{d.cover_url}} src="{{d.cover_url}}"
+                                                alt="{{d.course}}" width="120"></div>
+    </script>
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('update')}?id={{d.id}}">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger" href="{:U('Knowledge/add')}?course_id={{d.id}}">添加知识点</a>
+        <a class="layui-btn layui-btn-xs layui-btn-warm" href="{:U('Paper/add')}?course_id={{d.id}}">添加试卷</a>
+    </script>
+    <script type="text/html" id="num">
+        <a href="{:U('Knowledge/index')}?course_id={{d.id}}">【<span
+                style="color: red">{{d.knowledge_num}}</span>】个知识点</a>
+    </script>
+    <script type="text/html" id="month">
+        {{# if(d.suit_month < 0){ }}
+        孕育中{{ d.suit_month_view}}个月
+        {{# } else { }}
+        {{d.suit_month_view}}个月
+        {{# } }}
+    </script>
+    <script type="text/html" id="status">
+        <!-- 这里的 checked 的状态只是演示 -->
+        <input type="checkbox" value="{{d.id}}" lay-skin="switch" lay-text="必修|选修" disabled
+               {{ d.require== 1 ? 'checked' : '' }}>
+    </script>
+    <script>
+        $(function () {
+            form.render();
+            var url = "{:U('index')}";
+            getData(url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+
+            $('body').on('mouseover', '.open-img-layer', function () {
+                var _this = $(this);
+                layer.photos({
+                    photos: _this
+                });
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '课程编ID', sort: true}
+                        , {field: 'course', width: 200, title: '课程标题'}
+                        , {field: 'suit_month', title: '适合月份', templet: '#month'}
+                        , {field: 'require', title: '课程类型', templet: '#status'}
+                        , {field: 'cover_url', title: '课程封面', width: 150, templet: '#img'}
+                        , {field: 'knowledge_num', width: 130, title: '知识点数量', templet: '#num'}
+                        , {field: 'add_time', width: 160, title: '添加时间'}
+                        , {field: 'update_time', width: 160, title: '更新时间'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit', width: 280}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

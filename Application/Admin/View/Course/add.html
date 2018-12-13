@@ -1,0 +1,157 @@
+<extend name="Common/common"/>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>添加课程信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="course" placeholder="请输入课程名称"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程简介</label>
+                    <div class="layui-input-block">
+                        <textarea name="desc" placeholder="请输入课程简介"
+                                  class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程封面</label>
+                    <div class="layui-input-block" style="position: relative">
+                        <input type="text" name="cover_url" id="img-input"
+                               class="layui-input layui-disabled"
+                               placeholder="请上传封面图片" readonly style="width: 75%">
+                        <div style="position: absolute;left:80% ;top:0;">
+                            <button type="button" class="layui-btn" id="layui-upload-file">
+                                <i class="layui-icon">&#xe67c;</i>上传封面
+                            </button>
+                        </div>
+                        <div style="position: absolute;left:80% ;top:50px;z-index: 10;display:none;">
+                            <img src="" width="100" id="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">适合月份</label>
+                    <div class="layui-input-inline">
+                        <select name="suit_month">
+                            <option value="">请选择适合月份</option>
+                            <option value="-1">孕9个月</option>
+                            <option value="-2">孕8个月</option>
+                            <option value="-3">孕7个月</option>
+                            <option value="-4">孕6个月</option>
+                            <option value="-5">孕5个月</option>
+                            <option value="-6">孕4个月</option>
+                            <option value="-7">孕3个月</option>
+                            <option value="-8">孕2个月</option>
+                            <option value="-9">孕1个月</option>
+                            <option value="0">新生儿</option>
+                            <option value="1">1个月</option>
+                            <option value="2">2个月</option>
+                            <option value="3">3个月</option>
+                            <option value="4">4个月</option>
+                            <option value="5">5个月</option>
+                            <option value="6">6个月</option>
+                            <option value="7">7个月</option>
+                            <option value="8">8个月</option>
+                            <option value="9">9个月</option>
+                            <option value="10">10个月</option>
+                            <option value="11">11个月</option>
+                            <option value="12">12个月</option>
+                            <option value="13">13个月</option>
+                            <option value="14">14个月</option>
+                            <option value="15">15个月</option>
+                            <option value="16">16个月</option>
+                            <option value="17">17个月</option>
+                            <option value="18">18个月</option>
+                            <option value="19">19个月</option>
+                            <option value="20">20个月</option>
+                            <option value="21">21个月</option>
+                            <option value="22">22个月</option>
+                            <option value="23">23个月</option>
+                            <option value="24">24个月</option>
+                            <option value="25">25个月</option>
+                            <option value="26">26个月</option>
+                            <option value="27">27个月</option>
+                            <option value="28">28个月</option>
+                            <option value="29">29个月</option>
+                            <option value="30">30个月</option>
+                            <option value="31">31个月</option>
+                            <option value="32">32个月</option>
+                            <option value="33">33个月</option>
+                            <option value="34">34个月</option>
+                            <option value="35">35个月</option>
+                            <option value="36">36个月</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">课程类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="require" value="1" lay-filter="radio" title="必修" checked>
+                        <input type="radio" name="require" value="2" lay-filter="radio" title="选修">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //自定义工具栏
+            layedit.build('layui-edit', {
+                tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+                , height: 200
+            })
+            upload.render({
+                elem: '#layui-upload-file'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input').val(res.url);
+                        $('#img').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 2) {
+                    $('#url').show();
+                } else {
+                    $('#url').hide();
+                }
+            });
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

@@ -1,0 +1,195 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .img-box {
+            width: 20%;
+            margin: 2%;
+            border: 1px solid #ccc;
+            position: relative;
+            float: left;
+        }
+
+        .img-box img {
+            width: 100%;
+        }
+
+        .img-box button {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</block>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>编辑知识点问题信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">问题概述</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" value="{$info.title}" placeholder="请输入问题概述"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">问题内容</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="question" value="{$info.question}" placeholder="请输入问题内容"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">问题类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="question_type" value="select"
+                               lay-filter="question_type" title="选择题"
+                        <if condition="$info['question_type'] eq 'select'">checked</if>
+                        >
+                        <input type="radio" name="question_type" value="completion" lay-filter="question_type"
+                               title="填空题"
+                        <if condition="$info['question_type'] eq 'completion'">checked</if>
+                        >
+                    </div>
+                </div>
+                <fieldset id="select"
+                <if condition="$info['question_type'] eq 'completion'">class="layui-elem-field hide"
+                    <else/>
+                    class="layui-elem-field"
+                </if>
+                >
+                <legend>选择答案类型-答案内容</legend>
+                <div class="layui-field-box">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">答案类型</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="select_type" value="single"
+                                   lay-filter="select_type" title="单选"
+                            <if condition="$info['select_type'] eq 'single'">checked</if>
+                            >
+                            <input type="radio" name="select_type" value="multiple" lay-filter="select_type"
+                                   title="多选"
+                            <if condition="$info['select_type'] eq 'completion'">checked</if>
+                            >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">问题答案</label>
+                        <div class="layui-input-block">
+                            <empty name="info.answer_option">
+                                <input type="text" name="answer_option[]"
+                                       style="display: inline-block;margin-bottom: 10px" placeholder="请输入问题答案"
+                                       class="layui-input">
+                                <input type="text" name="answer_option[]"
+                                       style="display: inline-block;margin-bottom: 10px" placeholder="请输入问题答案"
+                                       class="layui-input">
+                                <else/>
+                                <volist name="info.answer_option" id="row">
+                                    <input type="text" name="answer_option[]" value="{$row}"
+                                           style="display: inline-block;margin-bottom: 10px" placeholder="请输入问题答案"
+                                           class="layui-input">
+                                </volist>
+                            </empty>
+                            <div id="before" class="hide"></div>
+                        </div>
+                    </div>
+                    <button type="button"
+                            class="layui-btn layui-btn-danger add-answer">添加答案输入框
+                    </button>
+                </div>
+    </fieldset>
+    <div class="layui-form-item">
+        <label class="layui-form-label">问题简介</label>
+        <div class="layui-input-block">
+                        <textarea name="desc" class="layui-textarea" id="desc"
+                                  placeholder="请输入知识点简介">{$info.desc}</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">问题视频</label>
+        <div class="layui-input-block" style="position: relative">
+            <input type="text" name="video" value="{$info.video}" id="video-input"
+                   class="layui-input layui-disabled"
+                   placeholder="请上传视频" readonly style="width: 75%">
+            <div style="position: absolute;left:80% ;top:0;">
+                <button type="button" class="layui-btn" id="layui-upload-video">
+                    <i class="layui-icon">&#xe67c;</i>上传视频
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <input type="hidden" name="id" value="{$info.id}">
+            <input type="hidden" name="knowledge_id" value="{$info.knowledge_id}">
+            <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script type="text/javascript" src='__UEDITOR__/ueditor.config.js'></script>
+    <script type="text/javascript" src='__UEDITOR__/ueditor.all.min.js'></script>
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //var edit_index = layedit.build('desc');
+            window.UEDITOR_CONFIG.initialFrameHeight = 400; //设置高度
+            window.UEDITOR_CONFIG.initialFrameWidth = 900;//设置宽度录
+            UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+            UE.Editor.prototype.getActionUrl = function (action) {
+                if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadimage') {
+                    return "{:U('Common/uploadImg')}";
+                } else {
+                    return this._bkGetActionUrl.call(this, action);
+                }
+            }
+            var desc = UE.getEditor('desc');
+            upload.render({
+                elem: '#layui-upload-video'
+                , accept: 'video'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#video-input').val(res.url);
+                    }
+                }
+            });
+            form.on('radio(question_type)', function (data) {
+                if (data.value == 'select') {
+                    $('#select').removeClass('hide');
+                } else {
+                    $('#select').addClass('hide');
+                }
+            });
+            $('body').on('click', '.add-answer', function () {
+                var html = ' <input type="text" name="answer_option[]" style="display: inline-block;margin-bottom: 10px" placeholder="请输入问题答案" class="layui-input">';
+                $('#before').before(html);
+            });
+
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('saveQuestion')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('question',array('knowledge_id'=>$info['knowledge_id']))}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

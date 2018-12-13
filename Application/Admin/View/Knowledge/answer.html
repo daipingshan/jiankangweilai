@@ -1,0 +1,41 @@
+<extend name="Common/common"/>
+<block name="body">
+    <table class="layui-table" lay-skin="line">
+        <colgroup>
+            <volist name="question" id="row">
+                <col>
+            </volist>
+            <col style="width: 10%">
+            <col style="width: 10%">
+        </colgroup>
+        <thead>
+        <tr>
+            <volist name="question" id="row">
+                <th>{$row.question}</th>
+            </volist>
+            <th>养育人</th>
+            <th>培训人</th>
+            <th>记录时间</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="answer_data" id="row">
+            <volist name="row" id="val">
+                <tr>
+                    <volist name="question" id="v">
+                        <td>{$val[$v['id']]['answer']}</td>
+                        <php>
+                            if($val[$v['id']]){
+                            $info = $val[$v['id']];
+                            }
+                        </php>
+                    </volist>
+                    <td>{$info['caregiver_name']}</td>
+                    <td>{$info['training_people_name']}</td>
+                    <td>{$info['add_time']}</td>
+                </tr>
+            </volist>
+        </volist>
+        </tbody>
+    </table>
+</block>

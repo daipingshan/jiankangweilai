@@ -1,0 +1,231 @@
+<extend name="Common/common"/>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>编辑养育人-宝宝信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">健康管理员</label>
+                    <div class="layui-input-block w50">
+                        <select name="trainer_id">
+                            <option value="">请选择健康管理员</option>
+                            <foreach name="trainer_data" item="val" key="key">
+                                <option value="{$key}"
+                                <if condition="$info['trainer_id'] eq $key">selected</if>
+                                >{$val}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">养育人姓名</label>
+                    <div class="layui-input-block w50">
+                        <input type="text" name="caregiver_name" value="{$info.caregiver_name}" placeholder="请输入养育人姓名"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">养育人图像</label>
+                    <div class="layui-input-block" style="position: relative">
+                        <input type="text" name="caregiver_avatar" value="{$info.caregiver_avatar}" id="img-input-1"
+                               class="layui-input layui-disabled"
+                               placeholder="请上传图像" readonly style="width: 75%">
+                        <div style="position: absolute;left:80% ;top:0;">
+                            <button type="button" class="layui-btn" id="layui-upload-file-1">
+                                <i class="layui-icon">&#xe67c;</i>上传养育人图像
+                            </button>
+                        </div>
+                        <div style="position: absolute;left:80% ;top:50px;"
+                        <if condition="$info['caregiver_avatar'] eq ''">class="hide"</if>
+                        >
+                        <img src="{$info.baby_avatar}" width="100" id="img-1">
+                    </div>
+                </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">养育人电话</label>
+            <div class="layui-input-block w50">
+                <input type="text" name="caregiver_mobile" value="{$info.caregiver_mobile}"
+                       placeholder="请输入养育人电话"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">养育人出生日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="caregiver_birthday" id="caregiver_birthday"
+                       value="{$info.caregiver_birthday}" placeholder="请选择养育人出生日期"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">养育人宝宝关系</label>
+            <div class="layui-input-block w50">
+                <select name="relation">
+                    <option value="">请选择养育人宝宝关系</option>
+                    <volist name="relation" id="row">
+                        <option value="{$row}"
+                        <if condition="$info.relation eq $row">selected</if>
+                        >{$row}</option>
+                    </volist>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" value="{$info.address}" placeholder="地址"
+                       class="layui-input">
+            </div>
+        </div>
+        <eq name="info.baby_status" value="0">
+            <div class="layui-form-item">
+                <label class="layui-form-label">宝宝状态</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="baby_status" value="1" lay-filter="baby_status" title="已出生"
+                    <eq name="info.baby_status" value="1">checked</eq>
+                    >
+                    <input type="radio" name="baby_status" value="0" lay-filter="baby_status" title="孕育中"
+                    <eq name="info.baby_status" value="0">checked</eq>
+                    >
+                </div>
+            </div>
+        </eq>
+        <div id="baby_yes"
+        <eq name="info.baby_status" value="0">class="hide"</eq>
+        >
+        <div class="layui-form-item">
+            <label class="layui-form-label">宝宝姓名</label>
+            <div class="layui-input-block w50">
+                <input type="text" name="baby_name" value="{$info.baby_name}" placeholder="请输入宝宝姓名"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">宝宝性别</label>
+            <div class="layui-input-block">
+                <input type="radio" name="baby_sex" value="1" lay-filter="baby_sex" title="男"
+                <eq name="info.baby_sex" value="1">checked</eq>
+                >
+                <input type="radio" name="baby_sex" value="2" lay-filter="baby_sex" title="女"
+                <eq name="info.baby_sex" value="2">checked</eq>
+                >
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">宝宝图像</label>
+            <div class="layui-input-block" style="position: relative">
+                <input type="text" name="baby_avatar" value="{$info.baby_avatar}" id="img-input"
+                       class="layui-input layui-disabled"
+                       placeholder="请上传图像" readonly style="width: 75%">
+                <div style="position: absolute;left:80% ;top:0;">
+                    <button type="button" class="layui-btn" id="layui-upload-file">
+                        <i class="layui-icon">&#xe67c;</i>上传宝宝图像
+                    </button>
+                </div>
+                <div style="position: absolute;left:80% ;top:50px;"
+                <if condition="$info['baby_avatar'] eq ''">class="hide"</if>
+                >
+                <img src="{$info.baby_avatar}" width="100" id="img">
+            </div>
+        </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">宝宝贫血值</label>
+            <div class="layui-input-block w50">
+                <input type="number" step="0.1" name="baby_anemia_value" value="{$info.baby_anemia_value}"
+                       placeholder="请输入宝宝贫血值"
+                       class="layui-input">
+            </div>
+        </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label" id="baby-birthday">宝宝出生日期</label>
+            <div class="layui-input-inline">
+                <input type="text" name="baby_birthday" id="baby_birthday" value="{$info.baby_birthday}"
+                       placeholder="请选择日期"
+                       class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <input type="hidden" name="id" value="{$info.id}">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+            </div>
+        </div>
+        </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //日期选择器
+            laydate.render({
+                elem: '#caregiver_birthday'
+            });
+            //日期选择器
+            laydate.render({
+                elem: '#baby_birthday'
+            });
+            upload.render({
+                elem: '#layui-upload-file'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input').val(res.url);
+                        $('#img').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+            upload.render({
+                elem: '#layui-upload-file-1'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input-1').val(res.url);
+                        $('#img-1').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+            form.on('radio(baby_status)', function (data) {
+                if (data.value == 1) {
+                    $('#baby-birthday').text('宝宝出生日期');
+                    $('#baby_yes').show();
+                } else {
+                    $('#baby-birthday').text('宝宝预产期');
+                    $('#baby_yes').hide();
+                }
+            });
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

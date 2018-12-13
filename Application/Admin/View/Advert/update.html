@@ -1,0 +1,122 @@
+<extend name="Common/common"/>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>编辑通知信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">通知标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" value="{$info.title}" autocomplete="off" placeholder="请输入广告标题"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">广告图片</label>
+                    <div class="layui-input-block" style="position: relative">
+                        <input type="text" name="pic" id="img-input"
+                               class="layui-input layui-disabled" value="{$info.pic}"
+                               placeholder="请上传广告图片" readonly style="width: 75%">
+                        <div style="position: absolute;left:80% ;top:0;">
+                            <button type="button" class="layui-btn" id="layui-upload-file">
+                                <i class="layui-icon">&#xe67c;</i>上传图片
+                            </button>
+                        </div>
+                        <div style="position: absolute;left:80% ;top:50px;">
+                            <img src="{$info.pic}" width="100" id="img">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">通知类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="type" value="1" lay-filter="radio" title="不跳转"
+                        <eq name="info.type" value="1">checked</eq>
+                        >
+                        <input type="radio" name="type" value="2" lay-filter="radio" title="url链接"
+                        <eq name="info.type" value="2">checked</eq>
+                        >
+                    </div>
+                </div>
+                <div
+                <if condition="$info['type'] eq 2">class="layui-form-item"
+                    <else/>
+                    class="layui-form-item hide"
+                </if>
+                id="url">
+                <label class="layui-form-label">url链接</label>
+                <div class="layui-input-block w50">
+                    <input type="text" name="content" value="{$info.content}" placeholder="请输入url链接"
+                           autocomplete="off"
+                           class="layui-input">
+                </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">通知排序</label>
+            <div class="layui-input-inline">
+                <input type="number" name="sort" value="{$info.sort}" placeholder="请输入广告排序"
+                       autocomplete="off"
+                       class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <input type="hidden" name="id" value="{$info.id}">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+            </div>
+        </div>
+        </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            //自定义工具栏
+            layedit.build('layui-edit', {
+                tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+                , height: 200
+            })
+            upload.render({
+                elem: '#layui-upload-file'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input').val(res.url);
+                        $('#img').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 2) {
+                    $('#url').show();
+                } else {
+                    $('#url').hide();
+                }
+            });
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

@@ -1,0 +1,121 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+
+        .img-list img {
+            display: none;
+            width: 80%;
+        }
+
+        .img-list img:first-child {
+            display: inline-block;
+        }
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="course_id">
+                    <option value="">请选择所属课程</option>
+                    <foreach name="course_data" item="val" key="key">
+                        <option value="{$key}"
+                        <if condition="I('get.course_id') eq $key">selected</if>
+                        >{$val}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <input type="text" name="title" value="{:I('get.title')}" placeholder="请输入知识点标题"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+                <a class="layui-btn layui-btn-danger" href="{:U('add')}"><i class="layui-icon">
+                    &#xe654;</i>添加知识点
+                </a>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="num">
+        【<span style="color: red">{{d.paper_num}}</span>】道试题
+        【<span style="color: red">{{d.question_num}}</span>】个问题
+    </script>
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('update')}?id={{d.id}}">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger del-data" data-num="{{d.question_num}}"
+           data-url="{:U('delete')}?id={{d.id}}">删除</a>
+        <a class="layui-btn layui-btn-xs layui-btn-warm" href="{:U('question')}?knowledge_id={{d.id}}">问题管理</a>
+        <a class="layui-btn layui-btn-xs layui-btn-normal" href="{:U('answer')}?knowledge_id={{d.id}}">答案统计</a>
+    </script>
+    <script>
+        $(function () {
+            var url = "{:U('index')}";
+            form.render();
+            var get_param = $('form.search').serialize();
+            var get_url = url + '?' + get_param;
+            getData(get_url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+
+            $('body').on('click', '.del-data', function () {
+                var del_url = $(this).data('url');
+                var num = $(this).data('num');
+                layer.confirm('该知识点下有' + num + '道试题，删除该知识点，会同时删除试题，对应试卷的分值也会发生变化，您确定要删除吗？', function () {
+                    $.get(del_url, {}, function (res) {
+                        if (res.status == 1) {
+                            layer.msg(res.info, function () {
+                                var get_param = $('form.search').serialize();
+                                var get_url = url + '?' + get_param;
+                                getData(get_url);
+                            })
+                        } else {
+                            layer.msg(res.info);
+                        }
+                    })
+                })
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '知识点ID', sort: true}
+                        , {field: 'course', width: 200, title: '课程名称'}
+                        , {field: 'title', width: 200, title: '知识点标题'}
+                        , {field: 'theme', title: '知识点主题'}
+                        , {field: 'question_num', title: '试题/问题数量', width: 200, templet: '#num'}
+                        , {field: 'add_time', width: 160, title: '添加时间'}
+                        , {field: 'update_time', width: 160, title: '更新时间'}
+                        , {fixed: 'right', width: 280, title: '操作', toolbar: '#table-edit'}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

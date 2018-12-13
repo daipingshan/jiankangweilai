@@ -1,0 +1,86 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+
+        .img-list img {
+            display: none;
+            width: 80%;
+        }
+
+        .img-list img:first-child {
+            display: inline-block;
+        }
+    </style>
+</block>
+<block name="body">
+    <a class="layui-btn layui-btn-danger" href="{:U('addQuestion',array('knowledge_id'=>I('get.knowledge_id')))}"><i
+            class="layui-icon">
+        &#xe654;</i>添加知识点问题
+    </a>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('updateQuestion')}?id={{d.id}}">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger del-data"
+           data-url="{:U('delQuestion')}?id={{d.id}}">删除</a>
+    </script>
+    <script>
+        $(function () {
+            var url = "{:U('question',array('knowledge_id'=>I('get.knowledge_id')))}";
+            form.render();
+            var get_param = $('form.search').serialize();
+            var get_url = url + '?' + get_param;
+            getData(get_url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+
+            $('body').on('click', '.del-data', function () {
+                var del_url = $(this).data('url');
+                layer.confirm('您确定要删除该问题吗？', function () {
+                    $.get(del_url, {}, function (res) {
+                        if (res.status == 1) {
+                            layer.msg(res.info, function () {
+                                location.reload();
+                            })
+                        } else {
+                            layer.msg(res.info);
+                        }
+                    })
+                })
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , cellMinWidth: 100
+                    , cols: [[
+                        {field: 'id', title: '知识点问题ID', sort: true}
+                        , {field: 'knowledge_title', width: 200, title: '知识点标题'}
+                        , {field: 'title', width: 200, title: '问题概述'}
+                        , {field: 'question', width: 200, title: '问题'}
+                        , {field: 'question_type', title: '问题类型'}
+                        , {field: 'add_time', width: 160, title: '添加时间'}
+                        , {field: 'update_time', width: 160, title: '更新时间'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit'}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

@@ -1,0 +1,244 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .row {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+    </style>
+</block>
+<block name="body">
+    <fieldset class="layui-elem-field">
+        <legend>添加试题信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">所属试卷</label>
+                    <div class="layui-input-block">
+                        <select name="test_paper_id" lay-filter="paper">
+                            <option value="">请选择试卷</option>
+                            <foreach name="paper_data" item="val" key="key">
+                                <option value="{$key}"
+                                <if condition="$info.test_paper_id eq $key">selected</if>
+                                >{$val}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">所属知识点</label>
+                    <div class="layui-input-block">
+                        <select name="knowledge_id" id="knowledge_id">
+                            <option value="">请选择所属知识点</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题分值</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="score" value="{$info.score}" placeholder="请输入试题分值"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="select_type" value="single" title="单选"
+                        <if condition="$info.select_type eq 'single'">checked</if>
+                        >
+                        <input type="radio" name="select_type" value="multiple" title="多选"
+                        <if condition="$info.select_type eq 'multiple'">checked</if>
+                        >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题问题</label>
+                    <div class="layui-input-block">
+                         <textarea name="question" placeholder="请输入试题问题"
+                                   class="layui-textarea">{$info.question}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <fieldset class="layui-elem-field w80">
+                        <legend>试题答案可选项</legend>
+                        <div class="layui-field-box" id="answer-box">
+                            <foreach name="info.answer_option_data" item="val" key="key">
+                                <div class="row">
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">类型</label>
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="answer_option[type][{$key}]" value="text"
+                                                   lay-filter="radio" title="文字"
+                                            <if condition="$val['type'] eq 'text'">checked</if>
+                                            >
+                                            <input type="radio" name="answer_option[type][{$key}]" value="pic"
+                                                   lay-filter="radio"
+                                                   title="图片"
+                                            <if condition="$val['type'] eq 'pic'">checked</if>
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item">
+                                        <label class="layui-form-label">选项值</label>
+                                        <div class="layui-input-inline">
+                                            <input type="text" name="answer_option[value][{$key}]"
+                                                   value="{$val['value']}"
+                                                   placeholder="请输入选项值：【例如：A】"
+                                                   class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div
+                                    <if condition="$val['type'] eq 'text'">class="layui-form-item content-text"
+                                        <else/>
+                                        class="layui-form-item content-text hide"
+                                    </if>
+                                    >
+                                    <label class="layui-form-label">内容</label>
+                                    <div class="layui-input-block">
+                                        <textarea name="answer_option[content_text][{$key}]" placeholder="请输入选项内容"
+                                                  class="layui-textarea"><if condition="$val['type'] eq 'text'">{$val['content']}</if></textarea>
+                                    </div>
+                                </div>
+                                <div
+                                <if condition="$val['type'] eq 'pic'">class="layui-form-item content-pic"
+                                    <else/>
+                                    class="layui-form-item content-pic hide"
+                                </if>
+                                >
+                                <label class="layui-form-label">内容</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="answer_option[content_pic][{$key}]"
+                                    <if condition="$val['type'] eq 'pic'">value="{$val['content']}"</if>
+                                    id="img-input-{$key}"
+                                    class="layui-input layui-disabled"
+                                    placeholder="请上传选项图片" readonly style="width: 75%">
+                                    <div style="position: absolute;left:80% ;top:0;">
+                                        <button type="button" class="layui-btn" id="layui-upload-file-{$key}">
+                                            <i class="layui-icon">&#xe67c;</i>上传图片
+                                        </button>
+                                    </div>
+                                    <div style="position: absolute;left:80% ;top:50px;"
+                                    <if condition="$val['type'] eq 'text'">class="hide"</if>
+                                    >
+                                    <img
+                                    <if condition="$val['type'] eq 'pic'">src="{$val['content']}"</if>
+                                    " width="100" id="img-{$key}">
+                                </div>
+                        </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">正确答案</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="answer_option[answer][{$key}]" title="是" value="1"
+                        <if condition="$val['answer'] eq 1">checked</if>
+                        >
+                    </div>
+                </div>
+        </div>
+        </foreach>
+        </div>
+    </fieldset>
+    <div class="layui-form-item">
+        <label class="layui-form-label">解释说明</label>
+        <div class="layui-input-block">
+                                            <textarea name="explain" placeholder="请输入解释说明"
+                                                      class="layui-textarea">{$info.explain}</textarea>
+        </div>
+    </div>
+    </div>
+    <div class="layui-form-item">
+        <input type="hidden" name="id" value="{$info.id}">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+        </div>
+    </div>
+    </form>
+    </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            form.render();
+            var paper_id = "{$info['test_paper_id']}";
+            var knowledge_id = "{$info['knowledge_id']}";
+            if (paper_id > 0) {
+                getKnowledge(paper_id, knowledge_id);
+            }
+            form.on('select(paper)', function (data) {
+                if (data.value > 0) {
+                    getKnowledge(data.value, 0);
+                }
+            })
+
+            $('body').on('click', '.del-box', function () {
+                $(this).parent().remove();
+            })
+
+            $('#answer-box .row').each(function (e) {
+                upload.render({
+                    elem: '#layui-upload-file-' + e
+                    , url: '/Common/uploadImg'
+                    , before: function () {
+                        index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                    }
+                    , done: function (res) {
+                        layer.close(index);
+                        layer.msg(res.message);
+                        if (res.state == 'SUCCESS') {
+                            $('#img-input-' + e).val(res.url);
+                            $('#img-' + e).attr('src', res.url).parent().show();
+                        }
+                    }
+                });
+            })
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 'pic') {
+                    data.othis.parents('.row').find('.content-text').hide();
+                    data.othis.parents('.row').find('.content-pic').show();
+                } else {
+                    data.othis.parents('.row').find('.content-text').show();
+                    data.othis.parents('.row').find('.content-pic').hide();
+                }
+            });
+
+            function getKnowledge(paper_id, knowledge_id) {
+                $.get("{:U('getKnowledgeData')}", {test_paper_id: paper_id}, function (res) {
+                    var data = res.info;
+                    if (data.length > 0) {
+                        var html = "<option value=''>请选择所属知识点</option>";
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].id == knowledge_id) {
+                                html += "<option value='" + data[i].id + "' selected>" + data[i].name + "</option>"
+                            } else {
+                                html += "<option value='" + data[i].id + "'>" + data[i].name + "</option>"
+                            }
+                        }
+                        $('#knowledge_id').html(html);
+                        form.render('select');
+                    }
+                })
+            }
+
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>

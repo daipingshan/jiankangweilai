@@ -1,0 +1,778 @@
+[ 2018-08-02T09:16:44+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001640s ]
+
+[ 2018-08-02T09:16:44+08:00 ] 127.0.0.1 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001649s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001617s ]
+
+[ 2018-08-02T09:16:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001874s ]
+
+[ 2018-08-02T09:16:47+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+
+[ 2018-08-02T09:16:49+08:00 ] 127.0.0.1 /Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000834s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0853s ]
+SQL: SELECT * FROM `admin` WHERE `username` = 'admin' AND `password` = '3f47c8a76a2af609c466ed3b6214aa31' LIMIT 1   [ RunTime:0.2097s ]
+
+[ 2018-08-02T09:16:53+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016365s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001310s ]
+
+[ 2018-08-02T09:16:58+08:00 ] 127.0.0.1 /Train/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001158s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0628s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.1213s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000943s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2018-08-02T09:16:59+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001829s ]
+SQL: SHOW COLUMNS FROM `train` [ RunTime:0.0651s ]
+SQL: SELECT COUNT(id) AS tp_count FROM train t LIMIT 1   [ RunTime:0.0644s ]
+SQL: SELECT t.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course FROM train t left join trainer t_n ON t_n.id=t.trainer_id left join caregiver_baby c_b ON c_b.id=t.caregiver_baby_id left join course c ON c.id=t.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0664s ]
+
+[ 2018-08-02T09:17:06+08:00 ] 127.0.0.1 /Exam/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0618s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0614s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001118s ]
+
+[ 2018-08-02T09:17:06+08:00 ] 127.0.0.1 /Exam/index.html?trainer_id=&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001883s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001976s ]
+SQL: SHOW COLUMNS FROM `exam` [ RunTime:0.0672s ]
+SQL: SELECT COUNT(id) AS tp_count FROM exam e LIMIT 1   [ RunTime:0.0661s ]
+SQL: SELECT e.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course,p.test_paper_name FROM exam e left join trainer t_n ON t_n.id=e.trainer_id left join caregiver_baby c_b ON c_b.id=e.caregiver_baby_id left join course c ON c.id=e.course_id left join test_paper p ON p.id=e.test_paper_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0664s ]
+
+[ 2018-08-02T09:17:07+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000938s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001114s ]
+
+[ 2018-08-02T09:17:08+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002424s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0614s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0603s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0824s ]
+
+[ 2018-08-02T09:17:09+08:00 ] 127.0.0.1 /Train/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001656s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0645s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000962s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2018-08-02T09:17:10+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+SQL: SHOW COLUMNS FROM `train` [ RunTime:0.0649s ]
+SQL: SELECT COUNT(id) AS tp_count FROM train t LIMIT 1   [ RunTime:0.0636s ]
+SQL: SELECT t.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course FROM train t left join trainer t_n ON t_n.id=t.trainer_id left join caregiver_baby c_b ON c_b.id=t.caregiver_baby_id left join course c ON c.id=t.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0682s ]
+
+[ 2018-08-02T09:17:15+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001580s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0622s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015571s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2018-08-02T09:17:16+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001556s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0656s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0612s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0648s ]
+
+[ 2018-08-02T09:17:19+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=2&caregiver_baby_id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001833s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001980s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0613s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0605s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000915s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001115s ]
+
+[ 2018-08-02T09:17:19+08:00 ] 127.0.0.1 /Train/getCaregiverData.html?trainer_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001698s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`caregiver_name`,`baby_name` FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0615s ]
+
+[ 2018-08-02T09:17:20+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=2&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000844s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001172s ]
+SQL: SHOW COLUMNS FROM `train` [ RunTime:0.0647s ]
+SQL: SELECT COUNT(id) AS tp_count FROM train t WHERE t.trainer_id = 2 LIMIT 1   [ RunTime:0.0614s ]
+SQL: SELECT t.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course FROM train t left join trainer t_n ON t_n.id=t.trainer_id left join caregiver_baby c_b ON c_b.id=t.caregiver_baby_id left join course c ON c.id=t.course_id  WHERE t.trainer_id = 2 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0618s ]
+
+[ 2018-08-02T09:17:22+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001546s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0630s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0619s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0658s ]
+
+[ 2018-08-02T09:17:23+08:00 ] 127.0.0.1 /Exam/index.html?trainer_id=2&caregiver_baby_id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001011s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001067s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0710s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0711s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000978s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001111s ]
+
+[ 2018-08-02T09:17:24+08:00 ] 127.0.0.1 /Exam/getCaregiverData.html?trainer_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002454s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0642s ]
+SQL: SELECT `id`,`caregiver_name`,`baby_name` FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0663s ]
+
+[ 2018-08-02T09:17:24+08:00 ] 127.0.0.1 /Exam/index.html?trainer_id=2&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+SQL: SHOW COLUMNS FROM `exam` [ RunTime:0.0653s ]
+SQL: SELECT COUNT(id) AS tp_count FROM exam e WHERE e.trainer_id = 2 LIMIT 1   [ RunTime:0.0644s ]
+SQL: SELECT e.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course,p.test_paper_name FROM exam e left join trainer t_n ON t_n.id=e.trainer_id left join caregiver_baby c_b ON c_b.id=e.caregiver_baby_id left join course c ON c.id=e.course_id left join test_paper p ON p.id=e.test_paper_id  WHERE e.trainer_id = 2 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0677s ]
+
+[ 2018-08-02T09:17:28+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.3197s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.2341s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.3818s ]
+
+[ 2018-08-02T09:17:31+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.2560s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 8 ORDER BY id desc  [ RunTime:0.2655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001136s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001313s ]
+
+[ 2018-08-02T09:41:30+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002362s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.0617s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 8 ORDER BY id desc  [ RunTime:0.0612s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000195s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000327s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003131s ]
+
+[ 2018-08-02T09:41:36+08:00 ] 127.0.0.1 /Train/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001823s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0656s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0648s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000544s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000732s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001855s ]
+
+[ 2018-08-02T09:41:36+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001458s ]
+SQL: SHOW COLUMNS FROM `train` [ RunTime:0.0643s ]
+SQL: SELECT COUNT(id) AS tp_count FROM train t LIMIT 1   [ RunTime:0.0611s ]
+SQL: SELECT t.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course FROM train t left join trainer t_n ON t_n.id=t.trainer_id left join caregiver_baby c_b ON c_b.id=t.caregiver_baby_id left join course c ON c.id=t.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0631s ]
+
+[ 2018-08-02T09:41:47+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0617s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017487s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001643s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001721s ]
+
+[ 2018-08-02T09:41:47+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001794s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0642s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0640s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0658s ]
+
+[ 2018-08-02T09:41:49+08:00 ] 127.0.0.1 /Exam/index.html?trainer_id=2&caregiver_baby_id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001687s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0618s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000289s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000384s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002552s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003142s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003274s ]
+
+[ 2018-08-02T09:41:49+08:00 ] 127.0.0.1 /Exam/getCaregiverData.html?trainer_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001501s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0668s ]
+SQL: SELECT `id`,`caregiver_name`,`baby_name` FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0704s ]
+
+[ 2018-08-02T09:41:50+08:00 ] 127.0.0.1 /Exam/index.html?trainer_id=2&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001103s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001159s ]
+SQL: SHOW COLUMNS FROM `exam` [ RunTime:0.0683s ]
+SQL: SELECT COUNT(id) AS tp_count FROM exam e WHERE e.trainer_id = 2 LIMIT 1   [ RunTime:0.0656s ]
+SQL: SELECT e.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course,p.test_paper_name FROM exam e left join trainer t_n ON t_n.id=e.trainer_id left join caregiver_baby c_b ON c_b.id=e.caregiver_baby_id left join course c ON c.id=e.course_id left join test_paper p ON p.id=e.test_paper_id  WHERE e.trainer_id = 2 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0763s ]
+
+[ 2018-08-02T09:41:52+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001719s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0631s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0618s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0649s ]
+
+[ 2018-08-02T09:41:56+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=2&caregiver_baby_id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002746s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0648s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000408s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003747s ]
+
+[ 2018-08-02T09:41:56+08:00 ] 127.0.0.1 /Train/getCaregiverData.html?trainer_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001798s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0624s ]
+SQL: SELECT `id`,`caregiver_name`,`baby_name` FROM `caregiver_baby` WHERE `trainer_id` = 2  [ RunTime:0.0872s ]
+
+[ 2018-08-02T09:41:57+08:00 ] 127.0.0.1 /Train/index.html?trainer_id=2&caregiver_id=&add_time=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001682s ]
+SQL: SHOW COLUMNS FROM `train` [ RunTime:0.0878s ]
+SQL: SELECT COUNT(id) AS tp_count FROM train t WHERE t.trainer_id = 2 LIMIT 1   [ RunTime:0.0608s ]
+SQL: SELECT t.*,t_n.real_name,t_n.mobile,c_b.caregiver_name,c_b.baby_name,c.course FROM train t left join trainer t_n ON t_n.id=t.trainer_id left join caregiver_baby c_b ON c_b.id=t.caregiver_baby_id left join course c ON c.id=t.course_id  WHERE t.trainer_id = 2 ORDER BY id desc LIMIT 0,10   [ RunTime:0.0971s ]
+
+[ 2018-08-02T09:42:02+08:00 ] 127.0.0.1 /Knowledge/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000887s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `course` [ RunTime:0.0670s ]
+SQL: SELECT `id`,`course` FROM `course`  [ RunTime:0.0651s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001205s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001413s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043912s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005868s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002974s ]
+
+[ 2018-08-02T09:42:04+08:00 ] 127.0.0.1 /Knowledge/index.html?course_id=&title=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001236s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0666s ]
+SQL: SELECT COUNT(id) AS tp_count FROM knowledge k LIMIT 1   [ RunTime:0.0656s ]
+SQL: SELECT k.*,c.course FROM knowledge k left join course c ON c.id=k.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.1408s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0657s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0668s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0657s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0659s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0654s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0658s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0654s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0656s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0653s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0649s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0649s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0663s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0642s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0655s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0656s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0644s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0657s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0644s ]
+
+[ 2018-08-02T09:42:06+08:00 ] 127.0.0.1 /Knowledge/answer.html?knowledge_id=38
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001198s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0692s ]
+SQL: SELECT `id`,`knowledge_id`,`question` FROM `knowledge_question` WHERE `knowledge_id` = 38  [ RunTime:0.0612s ]
+SQL: SHOW COLUMNS FROM `knowledge_answer` [ RunTime:0.0764s ]
+SQL: SELECT * FROM `knowledge_answer` WHERE `knowledge_id` = 38  [ RunTime:0.0615s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000578s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000829s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001752s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004037s ]
+
+[ 2018-08-02T09:42:11+08:00 ] 127.0.0.1 /Knowledge/index.html?course_id=&title=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002009s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0625s ]
+SQL: SELECT COUNT(id) AS tp_count FROM knowledge k LIMIT 1   [ RunTime:0.0613s ]
+SQL: SELECT k.*,c.course FROM knowledge k left join course c ON c.id=k.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.1324s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0622s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0634s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0619s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0611s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0607s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0627s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0627s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0613s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0621s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0621s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0633s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0617s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0608s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0606s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0618s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0616s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0627s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0619s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0616s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0611s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0631s ]
+
+[ 2018-08-02T09:42:13+08:00 ] 127.0.0.1 /Knowledge/answer.html?knowledge_id=37
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`knowledge_id`,`question` FROM `knowledge_question` WHERE `knowledge_id` = 37  [ RunTime:0.0658s ]
+SQL: SHOW COLUMNS FROM `knowledge_answer` [ RunTime:0.0651s ]
+SQL: SELECT * FROM `knowledge_answer` WHERE `knowledge_id` = 37  [ RunTime:0.0655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000230s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002399s ]
+
+[ 2018-08-02T09:42:21+08:00 ] 127.0.0.1 /Knowledge/index.html?course_id=&title=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0657s ]
+SQL: SELECT COUNT(id) AS tp_count FROM knowledge k LIMIT 1   [ RunTime:0.2441s ]
+SQL: SELECT k.*,c.course FROM knowledge k left join course c ON c.id=k.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.1366s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0630s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0612s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0618s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0620s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0617s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0601s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0605s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0618s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0616s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0624s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.0606s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.0605s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0609s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.0606s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0612s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0610s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.0614s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0601s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.0606s ]
+
+[ 2018-08-02T13:52:08+08:00 ] 127.0.0.1 /Knowledge/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+SQL: SHOW COLUMNS FROM `course` [ RunTime:0.0621s ]
+SQL: SELECT `id`,`course` FROM `course`  [ RunTime:0.0622s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.144975s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.145165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.882676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.882744s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.043705s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043768s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.067919s ]
+INFO: [ app_end ] --END-- [ RunTime:0.067994s ]
+
+[ 2018-08-02T13:52:12+08:00 ] 127.0.0.1 /Knowledge/index.html?course_id=&title=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000863s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0617s ]
+SQL: SELECT COUNT(id) AS tp_count FROM knowledge k LIMIT 1   [ RunTime:0.0614s ]
+SQL: SELECT k.*,c.course FROM knowledge k left join course c ON c.id=k.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.1347s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0628s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0613s ]
+SQL: SHOW COLUMNS FROM `knowledge_question` [ RunTime:0.0679s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 38 LIMIT 1   [ RunTime:0.0607s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0616s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 37 LIMIT 1   [ RunTime:0.0608s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0629s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 36 LIMIT 1   [ RunTime:0.0612s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.0719s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 35 LIMIT 1   [ RunTime:0.1091s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.1002s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 31 LIMIT 1   [ RunTime:0.1771s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.1209s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 30 LIMIT 1   [ RunTime:0.1632s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.2128s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 29 LIMIT 1   [ RunTime:0.2395s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.2857s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 28 LIMIT 1   [ RunTime:0.2084s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.1231s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 27 LIMIT 1   [ RunTime:0.1284s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `test_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.1906s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `knowledge_question` WHERE `knowledge_id` = 26 LIMIT 1   [ RunTime:0.1429s ]
+
+[ 2018-08-02T13:52:12+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+

@@ -1,0 +1,2231 @@
+[ 2018-07-05T08:58:38+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001946s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2018-07-05T08:58:38+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001544s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0713s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0691s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0699s ]
+
+[ 2018-07-05T08:58:48+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000939s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2018-07-05T08:58:51+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.1449s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.1442s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.1454s ]
+
+[ 2018-07-05T08:59:02+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2018-07-05T08:59:03+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001552s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0846s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0817s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0848s ]
+
+[ 2018-07-05T08:59:19+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002067s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2018-07-05T08:59:20+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0614s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0622s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0632s ]
+
+[ 2018-07-05T08:59:26+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000991s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001138s ]
+
+[ 2018-07-05T08:59:27+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000925s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001264s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0621s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0612s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0625s ]
+
+[ 2018-07-05T08:59:33+08:00 ] 127.0.0.1 /Feedback/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+
+[ 2018-07-05T08:59:34+08:00 ] 127.0.0.1 /Feedback/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001606s ]
+SQL: SHOW COLUMNS FROM `feedback` [ RunTime:0.0682s ]
+SQL: SELECT COUNT(id) AS tp_count FROM feedback f LIMIT 1   [ RunTime:0.0675s ]
+SQL: SELECT f.*,t.mobile,t.real_name FROM feedback f left join trainer t ON t.id=f.trainer_id  ORDER BY id desc,reply_time asc LIMIT 0,10   [ RunTime:0.0680s ]
+
+[ 2018-07-05T11:38:24+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0625s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0713s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000625s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000840s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044915s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045092s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000979s ]
+
+[ 2018-07-05T11:38:25+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000909s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001394s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0637s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0604s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0632s ]
+
+[ 2018-07-05T11:38:47+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001192s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.1240s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0713s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000351s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034654s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001869s ]
+
+[ 2018-07-05T11:38:48+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001451s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0665s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0615s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0627s ]
+
+[ 2018-07-05T11:38:50+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002568s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 1 ORDER BY id desc  [ RunTime:0.0653s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039095s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001657s ]
+
+[ 2018-07-05T11:39:57+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000944s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001576s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0661s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0619s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000973s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2018-07-05T11:39:58+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001455s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0627s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0636s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0636s ]
+
+[ 2018-07-05T11:40:19+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0624s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001655s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001752s ]
+
+[ 2018-07-05T11:40:20+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000961s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0729s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0671s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0682s ]
+
+[ 2018-07-05T11:40:21+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001573s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.0653s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 1 ORDER BY id desc  [ RunTime:0.0665s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000416s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040342s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001322s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001052s ]
+
+[ 2018-07-05T11:40:25+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.0653s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 1 ORDER BY id desc  [ RunTime:0.0647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009388s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2018-07-05T11:40:35+08:00 ] 127.0.0.1 /Config/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+SQL: SHOW COLUMNS FROM `config` [ RunTime:0.0642s ]
+SQL: SELECT `content` FROM `config` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0672s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001689s ]
+
+[ 2018-07-05T11:41:02+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001199s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0615s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0607s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000492s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030386s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000973s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2018-07-05T11:41:02+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001403s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0664s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0642s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0660s ]
+
+[ 2018-07-05T11:47:12+08:00 ] 127.0.0.1 /CaregiverBaby/babyGrow.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+SQL: SHOW COLUMNS FROM `baby_grow` [ RunTime:0.0622s ]
+SQL: SELECT * FROM `baby_grow` WHERE `baby_id` = 1 ORDER BY id desc  [ RunTime:0.0611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000740s ]
+
+[ 2018-07-05T12:00:43+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001497s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000135s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000722s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2018-07-05T12:00:44+08:00 ] 127.0.0.1 /Trainer/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001538s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0669s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `trainer` LIMIT 1   [ RunTime:0.0653s ]
+SQL: SELECT * FROM `trainer` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0701s ]
+
+[ 2018-07-05T12:00:52+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0696s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0687s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000430s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001409s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2018-07-05T12:00:53+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0669s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0639s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0658s ]
+
+[ 2018-07-05T12:00:56+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?trainer_id=1&caregiver_name=&caregiver_mobile=&baby_name=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0657s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c WHERE c.trainer_id = '1' LIMIT 1   [ RunTime:0.0645s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  WHERE c.trainer_id = '1' ORDER BY id desc LIMIT 0,10   [ RunTime:0.0661s ]
+
+[ 2018-07-05T14:03:05+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012601s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000767s ]
+
+[ 2018-07-05T14:03:14+08:00 ] 127.0.0.1 /Trainer/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001394s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.3540s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `trainer` LIMIT 1   [ RunTime:0.0883s ]
+SQL: SELECT * FROM `trainer` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0657s ]
+
+[ 2018-07-05T14:03:14+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000938s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001192s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2018-07-05T14:03:14+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2018-07-05T14:03:14+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009434s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2018-07-05T14:03:18+08:00 ] 127.0.0.1 /Trainer/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0617s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `trainer` LIMIT 1   [ RunTime:0.0682s ]
+SQL: SELECT * FROM `trainer` ORDER BY id desc LIMIT 0,10   [ RunTime:1.7492s ]
+
+[ 2018-07-05T14:06:42+08:00 ] 127.0.0.1 /Knowledge/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001073s ]
+SQL: SHOW COLUMNS FROM `course` [ RunTime:0.3081s ]
+SQL: SELECT `id`,`course` FROM `course`  [ RunTime:0.3075s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2018-07-05T14:08:41+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000687s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0698s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0699s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2018-07-05T14:08:42+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001444s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0707s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0695s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0729s ]
+
+[ 2018-07-05T14:08:46+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000926s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0646s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0821s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000501s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001887s ]
+
+[ 2018-07-05T14:09:24+08:00 ] 127.0.0.1 /Trainer/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000970s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2018-07-05T14:09:25+08:00 ] 127.0.0.1 /Trainer/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001517s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0667s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `trainer` LIMIT 1   [ RunTime:0.0655s ]
+SQL: SELECT * FROM `trainer` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0644s ]
+
+[ 2018-07-05T14:09:28+08:00 ] 127.0.0.1 /CaregiverBaby/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000977s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0612s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000221s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2018-07-05T14:09:29+08:00 ] 127.0.0.1 /CaregiverBaby/index.html?page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001290s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001362s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0664s ]
+SQL: SELECT COUNT(id) AS tp_count FROM caregiver_baby c LIMIT 1   [ RunTime:0.0658s ]
+SQL: SELECT c.*,t.real_name,t.mobile FROM caregiver_baby c left join trainer t ON t.id=c.trainer_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0679s ]
+
+[ 2018-07-05T14:09:31+08:00 ] 127.0.0.1 /CaregiverBaby/update.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001851s ]
+SQL: SHOW COLUMNS FROM `caregiver_baby` [ RunTime:0.0624s ]
+SQL: SELECT * FROM `caregiver_baby` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `trainer` [ RunTime:0.0620s ]
+SQL: SELECT `id`,`real_name`,`mobile` FROM `trainer` WHERE `status` = 1  [ RunTime:0.0614s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2018-07-05T14:18:51+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001257s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001343s ]
+
+[ 2018-07-05T16:59:49+08:00 ] 127.0.0.1 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000733s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011614s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2018-07-05T16:59:54+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0694s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0685s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000227s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2018-07-05T17:04:33+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0697s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0705s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000731s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001073s ]
+
+[ 2018-07-05T17:09:10+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0648s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000892s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2018-07-05T17:10:15+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0693s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0679s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000528s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000632s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000770s ]
+
+[ 2018-07-05T17:10:39+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0612s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0612s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000424s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2018-07-05T17:10:51+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0631s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0608s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0618s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 1  [ RunTime:0.0605s ]
+
+[ 2018-07-05T17:11:17+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0616s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0613s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001050s ]
+
+[ 2018-07-05T17:12:36+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000780s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+
+[ 2018-07-05T17:12:46+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+
+[ 2018-07-05T17:22:15+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000755s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0643s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0639s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000273s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001020s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2018-07-05T17:22:18+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0617s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000242s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000943s ]
+
+[ 2018-07-05T17:22:18+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001377s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0707s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0698s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0708s ]
+
+[ 2018-07-05T17:22:20+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0627s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0631s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0623s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0647s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000420s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000664s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2018-07-05T17:22:21+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000987s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0709s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0662s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0655s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0651s ]
+
+[ 2018-07-05T17:22:36+08:00 ] 127.0.0.1 /Paper/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+SQL: SHOW COLUMNS FROM `course` [ RunTime:0.0649s ]
+SQL: SELECT `id`,`course` FROM `course`  [ RunTime:0.0643s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030345s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001296s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001306s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001388s ]
+
+[ 2018-07-05T17:22:36+08:00 ] 127.0.0.1 /Paper/index.html?course_id=&test_paper_name=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001013s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001089s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0622s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_paper p LIMIT 1   [ RunTime:0.0612s ]
+SQL: SELECT p.*,c.course FROM test_paper p left join course c ON c.id=p.course_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0625s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0621s ]
+SQL: SELECT count(id) as num,sum(score) as score FROM `test_question` WHERE `test_paper_id` = 2  [ RunTime:0.0616s ]
+SQL: SELECT count(id) as num,sum(score) as score FROM `test_question` WHERE `test_paper_id` = 1  [ RunTime:0.0611s ]
+
+[ 2018-07-05T17:22:42+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0655s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000540s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001591s ]
+
+[ 2018-07-05T17:22:42+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0667s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0693s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0666s ]
+
+[ 2018-07-05T17:22:47+08:00 ] 127.0.0.1 /Question/update.html?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001415s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0621s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0628s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0612s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0618s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045295s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001495s ]
+
+[ 2018-07-05T17:22:47+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000990s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0655s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0624s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0641s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0621s ]
+
+[ 2018-07-05T17:22:50+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001040s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0695s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0677s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0708s ]
+
+[ 2018-07-05T17:22:52+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0698s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0695s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0703s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0696s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000943s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2018-07-05T17:22:52+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0615s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0627s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0648s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0626s ]
+
+[ 2018-07-05T17:23:20+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.2213s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.2190s ]
+
+[ 2018-07-05T17:23:22+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.2753s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.2748s ]
+
+[ 2018-07-05T17:25:29+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001070s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0643s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0638s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0627s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0615s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029650s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029729s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001408s ]
+
+[ 2018-07-05T17:25:29+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0659s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0643s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0652s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0655s ]
+
+[ 2018-07-05T17:25:31+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0683s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0688s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0679s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0675s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000789s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2018-07-05T17:25:31+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001126s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0684s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0679s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0685s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0679s ]
+
+[ 2018-07-05T17:25:32+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0639s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0629s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0613s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0604s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000682s ]
+
+[ 2018-07-05T17:25:33+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001372s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0619s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0621s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0626s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0636s ]
+
+[ 2018-07-05T17:25:56+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0647s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0633s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:26:26+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000756s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0654s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0639s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:26:47+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0653s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0641s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:27:26+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.4041s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.4262s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.3775s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.3867s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+NOTIC: [8] Undefined index: answer D:\www\online_team\www.jiankangweilai.com\Application\Runtime\Cache\Admin\c69c1d32a9f28d621b0cc749f456e1f1.php 第 229 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000766s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2018-07-05T17:27:30+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.4189s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.3612s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.3437s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.2251s ]
+
+[ 2018-07-05T17:27:37+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001465s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0648s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0647s ]
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:27:57+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001253s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0662s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0607s ]
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:28:20+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001839s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0620s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.1181s ]
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.1799s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='30',`select_type`='multiple',`question`='宝宝正确的睡姿是哪个？',`answer_option`='[{\"type\":\"pic\",\"value\":\"A\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8ce9f6e5.png\",\"answer\":\"1\"},{\"type\":\"pic\",\"value\":\"B\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8e445420.png\",\"answer\":\"1\"},{\"type\":\"pic\",\"value\":\"C\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd90c9c152.png\",\"answer\":0}]',`answer`='A,B',`explain`='宝宝趴着睡容易窒息',`update_time`='2018-07-05 17:28:19' WHERE `id` = 4 [ RunTime:0.2736s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:28:20' WHERE `id` = 1 [ RunTime:0.3255s ]
+
+[ 2018-07-05T17:28:24+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001767s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.1041s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.1470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000743s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2018-07-05T17:28:26+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000927s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001357s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.3511s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0659s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0670s ]
+
+[ 2018-07-05T17:28:31+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0622s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0647s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0613s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0607s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017597s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000971s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2018-07-05T17:28:32+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001574s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0639s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0615s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0629s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0623s ]
+
+[ 2018-07-05T17:38:32+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.1316s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.1409s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000468s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001321s ]
+
+[ 2018-07-05T17:38:33+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000838s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.2261s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.1485s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0825s ]
+
+[ 2018-07-05T17:38:36+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000869s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.1491s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0728s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0663s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0651s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000370s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000905s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2018-07-05T17:38:37+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001010s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0658s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0649s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0665s ]
+
+[ 2018-07-05T17:38:40+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0654s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0656s ]
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0657s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='30',`select_type`='multiple',`question`='宝宝正确的睡姿是哪个？',`answer_option`='[{\"type\":\"pic\",\"value\":\"A\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8ce9f6e5.png\",\"answer\":1},{\"type\":\"pic\",\"value\":\"B\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8e445420.png\",\"answer\":1},{\"type\":\"pic\",\"value\":\"C\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd90c9c152.png\",\"answer\":0}]',`answer`='A,B',`explain`='宝宝趴着睡容易窒息',`update_time`='2018-07-05 17:38:39' WHERE `id` = 4 [ RunTime:0.0643s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:38:39' WHERE `id` = 1 [ RunTime:0.0640s ]
+
+[ 2018-07-05T17:38:43+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001008s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0647s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000446s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000878s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2018-07-05T17:38:44+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0637s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0628s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0661s ]
+
+[ 2018-07-05T17:39:09+08:00 ] 127.0.0.1 /Question/update.html?id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001351s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0653s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0647s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0652s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0643s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000736s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-07-05T17:39:10+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001490s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0632s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0628s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0620s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0620s ]
+
+[ 2018-07-05T17:39:12+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0653s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0641s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0666s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='2',`score`='35',`select_type`='single',`question`='家里有新生儿，大人能抽烟么',`answer_option`='[{\"type\":\"text\",\"value\":\"A\",\"content\":\"\\u80fd\",\"answer\":0},{\"type\":\"text\",\"value\":\"B\",\"content\":\"\\u4e0d\\u80fd\",\"answer\":1}]',`answer`='B',`explain`='宝宝是不能吸二手烟的',`update_time`='2018-07-05 17:39:12' WHERE `id` = 3 [ RunTime:0.0647s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:39:12' WHERE `id` = 1 [ RunTime:0.0659s ]
+
+[ 2018-07-05T17:39:16+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000776s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0642s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0617s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001556s ]
+
+[ 2018-07-05T17:39:16+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000859s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001267s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0747s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0639s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0666s ]
+
+[ 2018-07-05T17:39:18+08:00 ] 127.0.0.1 /Question/update.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001534s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0657s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0662s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0657s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0652s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000823s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2018-07-05T17:39:19+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0617s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0608s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0614s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0614s ]
+
+[ 2018-07-05T17:39:22+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000847s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0655s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0646s ]
+
+[ 2018-07-05T17:39:28+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.3077s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.1161s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0628s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='35',`select_type`='single',`question`='宝宝能和大人睡么',`answer_option`='[{\"type\":\"text\",\"value\":\"A\",\"content\":\"\\u80fd\",\"answer\":0},{\"type\":\"text\",\"value\":\"D\",\"content\":\"\\u4e0d\\u80fd\",\"answer\":1}]',`answer`='D',`explain`='不能和大人睡一起',`update_time`='2018-07-05 17:39:28' WHERE `id` = 2 [ RunTime:0.0625s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:39:28' WHERE `id` = 1 [ RunTime:0.0634s ]
+
+[ 2018-07-05T17:39:32+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000836s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0698s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022411s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001089s ]
+
+[ 2018-07-05T17:39:32+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000954s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001515s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0641s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0613s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0634s ]
+
+[ 2018-07-05T17:39:37+08:00 ] 127.0.0.1 /Question/update.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000974s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0649s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0655s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0643s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0644s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000391s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019947s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2018-07-05T17:39:38+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001475s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0650s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0637s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0646s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0641s ]
+
+[ 2018-07-05T17:39:39+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0738s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0674s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0697s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='35',`select_type`='single',`question`='宝宝能和大人睡么',`answer_option`='[{\"type\":\"text\",\"value\":\"A\",\"content\":\"\\u80fd\",\"answer\":0},{\"type\":\"text\",\"value\":\"D\",\"content\":\"\\u4e0d\\u80fd\",\"answer\":1}]',`answer`='D',`explain`='不能和大人睡一起',`update_time`='2018-07-05 17:39:39' WHERE `id` = 2 [ RunTime:0.0680s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:39:39' WHERE `id` = 1 [ RunTime:0.0816s ]
+
+[ 2018-07-05T17:39:43+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002013s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0618s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0610s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2018-07-05T17:39:44+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0626s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0609s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0637s ]
+
+[ 2018-07-05T17:39:45+08:00 ] 127.0.0.1 /Question/update.html?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001072s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0679s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0653s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0649s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0645s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041891s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003304s ]
+
+[ 2018-07-05T17:39:46+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001402s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0676s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0689s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0674s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0667s ]
+
+[ 2018-07-05T17:39:50+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.3511s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.2642s ]
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 0 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 3 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 3 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.1837s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='5',`select_type`='single',`question`='1+1等于几',`answer_option`='[{\"type\":\"pic\",\"value\":\"A\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0704\\/5b3c32002c7f8.jpg\",\"answer\":0},{\"type\":\"text\",\"value\":\"B\",\"content\":\"2\",\"answer\":1},{\"type\":\"pic\",\"value\":\"C\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0704\\/5b3c320873569.jpg\",\"answer\":0},{\"type\":\"text\",\"value\":\"D\",\"content\":\"4\",\"answer\":0}]',`answer`='B',`explain`='1+1=2是正确答案',`update_time`='2018-07-05 17:39:49' WHERE `id` = 1 [ RunTime:0.0672s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:39:50' WHERE `id` = 1 [ RunTime:0.0640s ]
+
+[ 2018-07-05T17:39:53+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0632s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001335s ]
+
+[ 2018-07-05T17:39:54+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001466s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0691s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0646s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0669s ]
+
+[ 2018-07-05T17:39:56+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0626s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0611s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000283s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2018-07-05T17:39:57+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000928s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001482s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0655s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0665s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0641s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0642s ]
+
+[ 2018-07-05T17:40:00+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0677s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0679s ]
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 1 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+
+[ 2018-07-05T17:40:05+08:00 ] 127.0.0.1 /Question/save.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001393s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0652s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0624s ]
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 145 行.
+NOTIC: [8] Undefined offset: 2 D:\www\online_team\www.jiankangweilai.com\Application\Admin\Controller\QuestionController.class.php 第 148 行.
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0625s ]
+SQL: UPDATE `test_question` SET `test_paper_id`='1',`course_id`='2',`knowledge_id`='1',`score`='30',`select_type`='multiple',`question`='宝宝正确的睡姿是哪个？',`answer_option`='[{\"type\":\"pic\",\"value\":\"A\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8ce9f6e5.png\",\"answer\":1},{\"type\":\"pic\",\"value\":\"B\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd8e445420.png\",\"answer\":1},{\"type\":\"pic\",\"value\":\"C\",\"content\":\"http:\\/\\/pic.taodianke.com\\/2018\\/0705\\/5b3dd90c9c152.png\",\"answer\":0}]',`answer`='A,B',`explain`='宝宝趴着睡容易窒息',`update_time`='2018-07-05 17:40:05' WHERE `id` = 4 [ RunTime:0.0620s ]
+SQL: UPDATE `test_paper` SET `update_time`='2018-07-05 17:40:05' WHERE `id` = 1 [ RunTime:0.0643s ]
+
+[ 2018-07-05T17:40:08+08:00 ] 127.0.0.1 /Question/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000885s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0660s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0667s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000199s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001182s ]
+
+[ 2018-07-05T17:40:09+08:00 ] 127.0.0.1 /Question/index.html?test_paper_id=&course_id=&question=&page=1&limit=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000979s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001609s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0622s ]
+SQL: SELECT COUNT(id) AS tp_count FROM test_question q LIMIT 1   [ RunTime:0.0609s ]
+SQL: SELECT q.*,p.test_paper_name,c.course,k.title FROM test_question q left join test_paper p ON p.id=q.test_paper_id left join course c ON c.id=q.course_id left join knowledge k ON k.id=q.knowledge_id  ORDER BY id desc LIMIT 0,10   [ RunTime:0.0664s ]
+
+[ 2018-07-05T17:44:56+08:00 ] 127.0.0.1 /Question/update.html?id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `test_question` [ RunTime:0.0642s ]
+SQL: SELECT * FROM `test_question` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0629s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0619s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0608s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000328s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001813s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2018-07-05T17:44:57+08:00 ] 127.0.0.1 /Question/getKnowledgeData.html?test_paper_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001831s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0636s ]
+SQL: SELECT `course_id` FROM `test_paper` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0624s ]
+SQL: SHOW COLUMNS FROM `knowledge` [ RunTime:0.0637s ]
+SQL: SELECT `id`,title as name FROM `knowledge` WHERE `course_id` = 2  [ RunTime:0.0636s ]
+
+[ 2018-07-05T18:06:49+08:00 ] 127.0.0.1 /Paper/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `course` [ RunTime:0.0621s ]
+SQL: SELECT `id`,`course` FROM `course`  [ RunTime:0.0782s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021394s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001192s ]
+
+[ 2018-07-05T18:06:51+08:00 ] 127.0.0.1 /Question/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001518s ]
+SQL: SHOW COLUMNS FROM `test_paper` [ RunTime:0.0664s ]
+SQL: SELECT `id`,`test_paper_name` FROM `test_paper`  [ RunTime:0.0646s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000267s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017420s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000847s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+

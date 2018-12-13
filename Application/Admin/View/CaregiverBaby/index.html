@@ -1,0 +1,156 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .layui-form-select .layui-edge {
+            right: 25%;
+        }
+
+        .layui-form-select dl {
+            min-width: 80%;
+        }
+    </style>
+</block>
+<block name="body">
+    <form class="layui-form search" action="" name="search">
+        <div class="layui-row">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <select name="trainer_id">
+                    <option value="">请选择健康管理员</option>
+                    <foreach name="trainer_data" item="row" key="k">
+                        <option value="{$k}"
+                        <if condition="I('get.trainer_id') eq $k">selected</if>
+                        >{$row}</option>
+                    </foreach>
+                </select>
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <input type="text" name="caregiver_name" value="{:I('get.caregiver_name')}" placeholder="请输入养育人姓名"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <input type="text" name="caregiver_mobile" value="{:I('get.caregiver_mobile')}" placeholder="请输入养育人电话"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md2">
+                <input type="text" name="baby_name" value="{:I('get.baby_name')}" placeholder="请输入宝宝姓名"
+                       class="layui-input">
+            </div>
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md3">
+                <button class="layui-btn search" type="button"><i class="layui-icon">
+                    &#xe615;</i>查询
+                </button>
+                <a class="layui-btn layui-btn-danger" href="{:U('add')}"><i class="layui-icon">
+                    &#xe654;</i>添加养育人-宝宝
+                </a>
+            </div>
+        </div>
+    </form>
+    <table class="layui-hide" id="table" lay-filter="table"></table>
+</block>
+<block name="js">
+    <script type="text/html" id="table-edit">
+        <a class="layui-btn layui-btn-xs" href="{:U('update')}?id={{d.id}}">编辑</a>
+        <a class="layui-btn layui-btn-xs layui-btn-danger baby-grow" data-title="{{d.baby_name}}成长记录"
+           data-url="{:U('babyGrow')}?id={{d.id}}">成长记录</a>
+        <a class="layui-btn layui-btn-xs layui-btn-warm"
+           href="{:U('Train/index')}?trainer_id={{d.trainer_id}}&caregiver_baby_id={{d.id}}">入户记录</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary"
+           href="{:U('Exam/index')}?trainer_id={{d.trainer_id}}&caregiver_baby_id={{d.id}}">考试记录</a>
+    </script>
+    <script type="text/html" id="trainer">
+        {{d.real_name}}-{{d.mobile}}
+    </script>
+    <script type="text/html" id="baby_status">
+        <input type="checkbox" lay-skin="switch" lay-text="已出生|孕育中" disabled
+               {{ d.baby_status== 1 ? 'checked' : '' }}>
+    </script>
+    <script type="text/html" id="img">
+        {{#  if(d. baby_avatar){ }}
+        <div class="open-img-layer cursor"><img layer-src={{d.baby_avatar}} src="{{d.baby_avatar}}"
+                                                alt="{{d.baby_name}}" width="120"></div>
+        {{# } else { }}
+        未上传宝宝图像
+        {{# } }}
+    </script>
+
+    <script type="text/html" id="img-1">
+        {{#  if(d. caregiver_avatar){ }}
+        <div class="open-img-layer cursor"><img layer-src={{d.caregiver_avatar}} src="{{d.caregiver_avatar}}"
+                                                alt="{{d.caregiver_name}}" width="120"></div>
+        {{# } else { }}
+        未上传养育人图像
+        {{# } }}
+    </script>
+
+    <script type="text/html" id="baby_sex">
+        {{#  if(d. baby_sex == 0){ }}
+        孕育中
+        {{# } else if(d.baby_sex == 1) { }}
+        男
+        {{# } else { }}
+        女
+        {{# } }}
+    </script>
+    <script>
+        $(function () {
+            form.render();
+            var url = "{:U('index')}";
+            getData(url);
+            $('form.search').on('click', 'button.search', function () {
+                var param = $('form.search').serialize();
+                var get_url = url + '?' + param;
+                getData(get_url);
+            });
+
+            $('body').on('mouseover', '.open-img-layer', function () {
+                var _this = $(this);
+                layer.photos({
+                    photos: _this
+                });
+            })
+
+            $('body').on('click', '.baby-grow', function () {
+                var location_url = $(this).data('url');
+                var title = $(this).data('title');
+                layer.open({
+                    type: 2,
+                    title: title,
+                    area: ['80%', '80%'],
+                    content: location_url
+                })
+            })
+
+            /**
+             * 获取数据
+             * @param url
+             */
+            function getData(url) {
+                table.render({
+                    elem: '#table'
+                    , url: url
+                    , page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
+                        layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'] //自定义分页布局
+                        , groups: 5 //只显示 1 个连续页码
+                    }
+                    , cellMinWidth: 120
+                    , cols: [[
+                        {field: 'id', width: 80, title: 'ID', sort: true}
+                        , {field: 'real_name', width: 200, title: '健康管理员', templet: '#trainer'}
+                        , {field: 'caregiver_name', title: '养育人姓名'}
+                        , {field: 'caregiver_avatar', width: 150, title: '养育人图像', templet: '#img-1'}
+                        , {field: 'caregiver_mobile', title: '养育人电话'}
+                        , {field: 'caregiver_age', title: '养育人年龄'}
+                        , {field: 'relation', title: '养育人宝宝关系'}
+                        , {field: 'address', width: 200, title: '地址'}
+                        , {field: 'baby_status', title: '宝宝状态', templet: '#baby_status'}
+                        , {field: 'baby_name', title: '宝宝姓名'}
+                        , {field: 'baby_sex', title: '宝宝性别', templet: '#baby_sex'}
+                        , {field: 'baby_anemia_value', title: '宝宝贫血值'}
+                        , {field: 'baby_avatar', width: 150, title: '宝宝图像', templet: '#img'}
+                        , {fixed: 'right', title: '操作', toolbar: '#table-edit', width: 280,}
+                    ]],
+                });
+            }
+        })
+    </script>
+</block>

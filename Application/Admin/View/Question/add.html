@@ -1,0 +1,335 @@
+<extend name="Common/common"/>
+<block name="css">
+    <style type="text/css">
+        .row {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .row .del-box {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</block>
+<block name="body">
+    <fieldset class="layui-elem-field w80">
+        <legend>添加试题信息</legend>
+        <div class="layui-field-box">
+            <form class="layui-form layui-form-pane" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">所属试卷</label>
+                    <div class="layui-input-block">
+                        <select name="test_paper_id" lay-filter="paper">
+                            <option value="">请选择试卷</option>
+                            <foreach name="paper_data" item="val" key="key">
+                                <option value="{$key}"
+                                <if condition="I('get.test_paper_id') eq $key">selected</if>
+                                >{$val}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">所属知识点</label>
+                    <div class="layui-input-block">
+                        <select name="knowledge_id" id="knowledge_id">
+                            <option value="">请选择所属知识点</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题分值</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="score" placeholder="请输入试题分值"
+                               class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题类型</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="select_type" value="single" title="单选" checked>
+                        <input type="radio" name="select_type" value="multiple" title="多选">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">试题问题</label>
+                    <div class="layui-input-block">
+                        <textarea name="question" placeholder="请输入试题问题"
+                                  class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <fieldset class="layui-elem-field">
+                        <legend>试题答案可选项</legend>
+                        <div class="layui-field-box">
+                            <div class="row">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">类型</label>
+                                    <div class="layui-input-block">
+                                        <input type="radio" name="answer_option[type][0]" value="text"
+                                               lay-filter="radio" title="文字"
+                                               checked>
+                                        <input type="radio" name="answer_option[type][0]" value="pic" lay-filter="radio"
+                                               title="图片">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">选项值</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="answer_option[value][0]" placeholder="请输入选项值：【例如：A】"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item content-text">
+                                    <label class="layui-form-label">内容</label>
+                                    <div class="layui-input-block">
+                                        <textarea name="answer_option[content_text][0]" placeholder="请输入选项内容"
+                                                  class="layui-textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class=" layui-form-item content-pic hide">
+                                    <label class="layui-form-label">内容</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="answer_option[content_pic][0]" id="img-input-0"
+                                               class="layui-input layui-disabled"
+                                               placeholder="请上传选项图片" readonly style="width: 75%">
+                                        <div style="position: absolute;left:80% ;top:0;">
+                                            <button type="button" class="layui-btn" id="layui-upload-file-0">
+                                                <i class="layui-icon">&#xe67c;</i>上传图片
+                                            </button>
+                                        </div>
+                                        <div style="position: absolute;left:80% ;top:50px;display:none;">
+                                            <img src="" width="100" id="img-0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">正确答案</label>
+                                    <div class="layui-input-block">
+                                        <input type="checkbox" name="answer_option[answer][0]" title="是" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">类型</label>
+                                    <div class="layui-input-block">
+                                        <input type="radio" name="answer_option[type][1]" value="text"
+                                               lay-filter="radio"
+                                               title="文字"
+                                               checked>
+                                        <input type="radio" name="answer_option[type][1]" value="pic" lay-filter="radio"
+                                               title="图片">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">选项值</label>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="answer_option[value][1]" placeholder="请输入选项值：【例如：B】"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item content-text">
+                                    <label class="layui-form-label">内容</label>
+                                    <div class="layui-input-block">
+                                            <textarea name="answer_option[content_text][1]" placeholder="请输入选项内容"
+                                                      class="layui-textarea"></textarea>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item content-pic hide">
+                                    <label class="layui-form-label">内容</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="answer_option[content_pic][1]" id="img-input-1"
+                                               class="layui-input layui-disabled"
+                                               placeholder="请上传选项图片" readonly style="width: 75%">
+                                        <div style="position: absolute;left:80% ;top:0;">
+                                            <button type="button" class="layui-btn" id="layui-upload-file-1">
+                                                <i class="layui-icon">&#xe67c;</i>上传图片
+                                            </button>
+                                        </div>
+                                        <div style="position: absolute;left:80% ;top:50px;display:none;">
+                                            <img src="" width="100" id="img-1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">正确答案</label>
+                                    <div class="layui-input-block">
+                                        <input type="checkbox" name="answer_option[answer][1]" title="是" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <button id="before" type="button"
+                                    class="layui-btn layui-btn-danger add-answer">添加答案可选项
+                            </button>
+                        </div>
+                    </fieldset>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">解释说明</label>
+                        <div class="layui-input-block">
+                                            <textarea name="explain" placeholder="请输入解释说明"
+                                                      class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submit" type="submit">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="js">
+    <script>
+        $(function () {
+            var index;
+            var key = 1;
+            form.render();
+            var paper_id = "{:I('get.test_paper_id',0,'int')}";
+            if (paper_id > 0) {
+                getKnowledge(paper_id);
+            }
+            form.on('select(paper)', function (data) {
+                if (data.value > 0) {
+                    getKnowledge(data.value);
+                }
+            })
+            $('body').on('click', '.add-answer', function () {
+                key++;
+                var html = '<div class="row">' +
+                    '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">类型</label>' +
+                    '<div class="layui-input-block">' +
+                    ' <input type="radio" name="answer_option[type][' + key + ']" value="text" lay-filter="radio" title="文字" checked>' +
+                    ' <input type="radio" name="answer_option[type][' + key + ']" value="pic" lay-filter="radio" title="图片">' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">选项值</label>' +
+                    '<div class="layui-input-inline">' +
+                    '<input type="text" name="answer_option[value][' + key + ']" placeholder="请输入选项值" class="layui-input">' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="layui-form-item content-text">' +
+                    '<label class="layui-form-label">内容</label>' +
+                    '<div class="layui-input-block">' +
+                    ' <textarea name="answer_option[content_text][' + key + ']" placeholder="请输入选项内容" class="layui-textarea"></textarea>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="layui-form-item content-pic hide">' +
+                    '<label class="layui-form-label">内容</label>' +
+                    '<div class="layui-input-block">' +
+                    '<input type="text" name="answer_option[content_pic][' + key + ']" id="img-input-' + key + '" class="layui-input layui-disabled" placeholder="请上传选项图片" readonly style="width: 75%">' +
+                    '<div style="position: absolute;left:80% ;top:0;"><button type="button" class="layui-btn" id="layui-upload-file-' + key + '"><i class="layui-icon">&#xe67c;</i>上传图片</button></div>' +
+                    '<div style="position: absolute;left:80% ;top:50px;display:none;"> <img src="" width="100" id="img-' + key + '"></div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div class="layui-form-item">' +
+                    '<label class="layui-form-label">正确答案</label>' +
+                    '<div class="layui-input-block">' +
+                    '<input type="checkbox" name="answer_option[answer][' + key + ']" title="是" value="1">' +
+                    '</div>' +
+                    '</div>' +
+                    '<button type="button" class="layui-btn layui-btn-xs layui-btn-danger del-box"><i class="layui-icon">&#xe640;</i></button>' +
+                    '</div>';
+                $('#before').before(html);
+                form.render();
+                upload.render({
+                    elem: '#layui-upload-file-' + key
+                    , url: '/Common/uploadImg'
+                    , before: function () {
+                        index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                    }
+                    , done: function (res) {
+                        layer.close(index);
+                        layer.msg(res.message);
+                        if (res.state == 'SUCCESS') {
+                            $('#img-input-' + key).val(res.url);
+                            $('#img-' + key).attr('src', res.url).parent().show();
+                        }
+                    }
+                });
+            })
+
+            $('body').on('click', '.del-box', function () {
+                $(this).parent().remove();
+            })
+            upload.render({
+                elem: '#layui-upload-file-0'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input-0').val(res.url);
+                        $('#img-0').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+            upload.render({
+                elem: '#layui-upload-file-1'
+                , url: '/Common/uploadImg'
+                , before: function () {
+                    index = layer.msg('上传中，请稍候', {icon: 16, time: false, shade: 0.8});
+                }
+                , done: function (res) {
+                    layer.close(index);
+                    layer.msg(res.message);
+                    if (res.state == 'SUCCESS') {
+                        $('#img-input-1').val(res.url);
+                        $('#img-1').attr('src', res.url).parent().show();
+                    }
+                }
+            });
+
+            form.on('radio(radio)', function (data) {
+                if (data.value == 'pic') {
+                    data.othis.parents('.row').find('.content-text').hide();
+                    data.othis.parents('.row').find('.content-pic').show();
+                } else {
+                    data.othis.parents('.row').find('.content-text').show();
+                    data.othis.parents('.row').find('.content-pic').hide();
+                }
+            });
+
+            function getKnowledge(paper_id) {
+                $.get("{:U('getKnowledgeData')}", {test_paper_id: paper_id}, function (res) {
+                    var data = res.info;
+                    if (data.length > 0) {
+                        var html = "<option value=''>请选择所属知识点</option>";
+                        for (var i = 0; i < data.length; i++) {
+                            html += "<option value='" + data[i].id + "'>" + data[i].name + "</option>"
+                        }
+                        $('#knowledge_id').html(html);
+                        form.render('select');
+                    }
+                })
+            }
+
+            form.on('submit(submit)', function (data) {
+                var _this = this;
+                _this.disabled = true;
+                $.post("{:U('save')}", data.field, function (res) {
+                    if (res.status == 1) {
+                        layer.msg(res.info, function () {
+                            location.href = "{:U('index')}"
+                        });
+                    } else {
+                        _this.disabled = false;
+                        layer.msg(res.info);
+                    }
+                });
+                return false;
+            });
+        })
+    </script>
+</block>
